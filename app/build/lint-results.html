@@ -1,0 +1,1328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Lint Report</title>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto" />
+<link rel="stylesheet" type="text/css" href="lint-results_files/hololike.css" />
+<script language="javascript" type="text/javascript"> 
+<!--
+function reveal(id) {
+if (document.getElementById) {
+document.getElementById(id).style.display = 'block';
+document.getElementById(id+'Link').style.display = 'none';
+}
+}
+//--> 
+</script>
+</head>
+<body>
+<h1>Lint Report</h1>
+<div class="titleSeparator"></div>
+Check performed at Thu May 01 10:37:35 CEST 2014.<br/>
+2 errors and 88 warnings found:<br/><br/>
+<table class="overview">
+<tr><td></td><td class="categoryColumn"><a href="#Correctness">Correctness</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#DuplicateIds">DuplicateIds: Duplicate ids within a single layout</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#DefaultLocale">DefaultLocale: Implied default locale in case conversion</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#SdCardPath">SdCardPath: Hardcoded reference to <code>/sdcard</code></a>
+</td></tr>
+<tr>
+<td class="countColumn">8</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#ShowToast">ShowToast: Toast created but not shown</a>
+</td></tr>
+<tr>
+<td class="countColumn">6</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#SpUsage">SpUsage: Using <code>dp</code> instead of <code>sp</code> for text sizes</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#Deprecated">Deprecated: Using deprecated resources</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-error.png" alt="Error" />
+<a href="#MangledCRLF">MangledCRLF: Mangled file line endings</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Security">Security</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#AllowBackup">AllowBackup: Missing <code>allowBackup</code> attribute</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Performance">Performance</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#MergeRootFrame">MergeRootFrame: FrameLayout can be replaced with <code>&lt;merge></code> tag</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#UseSparseArrays">UseSparseArrays: HashMap can be replaced with SparseArray</a>
+</td></tr>
+<tr>
+<td class="countColumn">20</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#UnusedResources">UnusedResources: Unused resources</a>
+</td></tr>
+<tr>
+<td class="countColumn">2</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#UselessParent">UselessParent: Useless parent layout</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Usability:Icons">Usability:Icons</a>
+</td></tr>
+<tr>
+<td class="countColumn">6</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#IconDensities">IconDensities: Icon densities validation</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Usability">Usability</a>
+</td></tr>
+<tr>
+<td class="countColumn">12</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#MenuTitle">MenuTitle: Missing menu title</a>
+</td></tr>
+<tr>
+<td class="countColumn">4</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#AlwaysShowAction">AlwaysShowAction: Usage of <code>showAsAction=always</code></a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#Internationalization">Internationalization</a>
+</td></tr>
+<tr>
+<td class="countColumn">16</td><td class="issueColumn"><img border="0" align="top" src="lint-results_files/lint-warning.png" alt="Warning" />
+<a href="#HardcodedText">HardcodedText: Hardcoded text</a>
+</td></tr>
+<tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (11)</a>
+</td></tr></table>
+<br/>
+<a name="Correctness"></a>
+<div class="category"><a href="#" title="Return to top">Correctness</a><div class="categorySeparator"></div>
+</div>
+<a name="DuplicateIds"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">DuplicateIds: Duplicate ids within a single layout</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Conelinelist2.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml</a>:50</span>: <span class="message">Duplicate id @+id/linearLayout1, already defined earlier in this layout</span><br /><pre class="errorlines">
+<span class="lineno">  47</span>         
+<span class="lineno">  48</span>         
+<span class="lineno">  49</span>     &lt;LinearLayout
+<span class="lineno">  50</span>         <span class="errorspan">android:id="@+id/linearLayout1"</span>
+<span class="lineno">  51</span>         android:layout_width="wrap_content"
+<span class="lineno">  52</span>         android:layout_height="fill_parent"
+</pre>
+<ul><span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Conelinelist2.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml</a>:42</span>: <span class="message">@+id/linearLayout1 originally defined here</span><br /><pre class="errorlines">
+<span class="lineno">  39</span>     &lt;/LinearLayout>
+<span class="lineno">  40</span> 
+<span class="lineno">  41</span>          &lt;LinearLayout
+<span class="lineno">  42</span>         <span class="errorspan">android:id="@+id/linearLayout1"</span>
+<span class="lineno">  43</span>         android:layout_width="fill_parent"
+<span class="lineno">  44</span>         android:layout_height="fill_parent"
+</pre></ul><span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Conelinelist2.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml</a>:50</span>: <span class="message">Duplicate id @+id/linearLayout1, already defined earlier in this layout</span><br /><pre class="errorlines">
+<span class="lineno">  47</span>         
+<span class="lineno">  48</span>         
+<span class="lineno">  49</span>     &lt;LinearLayout
+<span class="lineno">  50</span>         <span class="errorspan">android:id="@+id/linearLayout1"</span>
+<span class="lineno">  51</span>         android:layout_width="wrap_content"
+<span class="lineno">  52</span>         android:layout_height="fill_parent"
+</pre>
+<ul><span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Conelinelist2.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml</a>:42</span>: <span class="message">@+id/linearLayout1 originally defined here</span><br /><pre class="errorlines">
+<span class="lineno">  39</span>     &lt;/LinearLayout>
+<span class="lineno">  40</span> 
+<span class="lineno">  41</span>          &lt;LinearLayout
+<span class="lineno">  42</span>         <span class="errorspan">android:id="@+id/linearLayout1"</span>
+<span class="lineno">  43</span>         android:layout_width="fill_parent"
+<span class="lineno">  44</span>         android:layout_height="fill_parent"
+</pre></ul></div>
+<div class="metadata">Priority: 7 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Checks for duplicate ids within a single layout.</div>
+<div class="explanation">
+Within a layout, id's should be unique since otherwise <code>findViewById()</code> can return an unexpected view.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "DuplicateIds" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="DefaultLocale"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">DefaultLocale: Implied default locale in case conversion</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cjava%5Ccom%5Cbeboo%5Cwifibackupandrestore%5Cbackupmanagement%5CConfReader.java">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\java\com\beboo\wifibackupandrestore\backupmanagement\ConfReader.java</a>:71</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use toUpperCase(Locale) instead</span><br /><pre class="errorlines">
+<span class="lineno">  68</span> 				case STATE_READING_NETWORK : {
+<span class="lineno">  69</span> 
+<span class="lineno">  70</span> 
+<span class="lineno">  71</span> 					if (line.trim().<span class="errorspan">toUpperCase().startsWith(CLOSE_NETWORK)) {</span>
+<span class="lineno">  72</span> 						System.out.println(networks.size()+" - adding network after read : "+currentNetwork.formatForWIFIBackupFile());
+<span class="lineno">  73</span> 						System.out.println("puttin net "+currentNetwork.getSsid()+" -> "+currentNetwork);
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cjava%5Ccom%5Cbeboo%5Cwifibackupandrestore%5Cbackupmanagement%5CConfReader.java">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\java\com\beboo\wifibackupandrestore\backupmanagement\ConfReader.java</a>:71</span>: <span class="message">Implicitly using the default locale is a common source of bugs: Use toUpperCase(Locale) instead</span><br /><pre class="errorlines">
+<span class="lineno">  68</span> 				case STATE_READING_NETWORK : {
+<span class="lineno">  69</span> 
+<span class="lineno">  70</span> 
+<span class="lineno">  71</span> 					if (line.trim().<span class="errorspan">toUpperCase().startsWith(CLOSE_NETWORK)) {</span>
+<span class="lineno">  72</span> 						System.out.println(networks.size()+" - adding network after read : "+currentNetwork.formatForWIFIBackupFile());
+<span class="lineno">  73</span> 						System.out.println("puttin net "+currentNetwork.getSsid()+" -> "+currentNetwork);
+</pre>
+</div>
+<div class="metadata">Priority: 6 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Finds calls to locale-ambiguous <code>String</code> manipulation methods.</div>
+<div class="explanation">
+Calling <code>String#toLowerCase()</code> or <code>#toUpperCase()</code> <b>without specifying an explicit locale</b> is a common source of bugs. The reason for that is that those methods will use the current locale on the user's device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for <code>i</code> is <b>not</b> <code>I</code>.<br/>
+<br/>
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call <code>String#toUpperCase(Locale.US)</code> instead. If you really want to use the current locale, call <code>String#toUpperCase(Locale.getDefault())</code> instead.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/java/util/Locale.html#default_locale">http://developer.android.com/reference/java/util/Locale.html#default_locale</a>
+</div><br/>To suppress this error, use the issue id "DefaultLocale" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="SdCardPath"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">SdCardPath: Hardcoded reference to <code>/sdcard</code></a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cjava%5Ccom%5Cbeboo%5Cwifibackupandrestore%5Cbackupmanagement%5CWIFIConfigurationManager.java">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\java\com\beboo\wifibackupandrestore\backupmanagement\WIFIConfigurationManager.java</a>:28</span>: <span class="message">Do not hardcode "/sdcard/"; use Environment.getExternalStorageDirectory().getPath() instead</span><br /><pre class="errorlines">
+<span class="lineno">  25</span>     public static final String WPA_SUPPLICANT_CONF_FILENAME = "wpa_supplicant.conf";
+<span class="lineno">  26</span>     public static final String BCM_SUPP_CONF_FILENAME = "bcm_supp.conf";
+<span class="lineno">  27</span>     public static final String BACKUP_FILE_NAME = "wifi.conf";
+<span class="lineno">  28</span>     public static final String BACKUP_PATH = <span class="errorspan">"/mnt/sdcard/WIFI_Backup_Restore";</span>
+<span class="lineno">  29</span>     public static final String BACKUP_HISTORY_PATH = BACKUP_PATH+"/history";
+<span class="lineno">  30</span>     public static final String WIFI_CONFIG_PATH = "/data/misc/wifi";
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cjava%5Ccom%5Cbeboo%5Cwifibackupandrestore%5Cbackupmanagement%5CWIFIConfigurationManager.java">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\java\com\beboo\wifibackupandrestore\backupmanagement\WIFIConfigurationManager.java</a>:28</span>: <span class="message">Do not hardcode "/sdcard/"; use Environment.getExternalStorageDirectory().getPath() instead</span><br /><pre class="errorlines">
+<span class="lineno">  25</span>     public static final String WPA_SUPPLICANT_CONF_FILENAME = "wpa_supplicant.conf";
+<span class="lineno">  26</span>     public static final String BCM_SUPP_CONF_FILENAME = "bcm_supp.conf";
+<span class="lineno">  27</span>     public static final String BACKUP_FILE_NAME = "wifi.conf";
+<span class="lineno">  28</span>     public static final String BACKUP_PATH = <span class="errorspan">"/mnt/sdcard/WIFI_Backup_Restore";</span>
+<span class="lineno">  29</span>     public static final String BACKUP_HISTORY_PATH = BACKUP_PATH+"/history";
+<span class="lineno">  30</span>     public static final String WIFI_CONFIG_PATH = "/data/misc/wifi";
+</pre>
+</div>
+<div class="metadata">Priority: 6 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for hardcoded references to <code>/sdcard</code></div>
+<div class="explanation">
+Your code should not reference the <code>/sdcard</code> path directly; instead use <code>Environment.getExternalStorageDirectory().getPath()</code>.<br/>
+<br/>
+Similarly, do not reference the <code>/data/data/</code> path directly; it can vary in multi-user scenarios. Instead, use <code>Context.getFilesDir().getPath()</code>.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/data/data-storage.html#filesExternal">http://developer.android.com/guide/topics/data/data-storage.html#filesExternal</a>
+</div><br/>To suppress this error, use the issue id "SdCardPath" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="ShowToast"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">ShowToast: Toast created but not shown</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cjava%5Ccom%5Cbeboo%5Cwifibackupandrestore%5CWIFIConfAccess.java">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\java\com\beboo\wifibackupandrestore\WIFIConfAccess.java</a>:324</span>: <span class="message">Expected duration Toast.LENGTH_SHORT or Toast.LENGTH_LONG, a custom duration value is not supported</span><br /><pre class="errorlines">
+<span class="lineno"> 321</span>                     result = (String) wcefSetValue.invoke(wcefClientCert.get(config), new Object[]{});
+<span class="lineno"> 322</span>                     Log.d("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>", "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 323</span>                     //out.write("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>" + "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 324</span>                     Toast toast1 = Toast.makeText(context, "All config data logged to ReadConfigLog.txt", <span class="errorspan">3000);</span>
+<span class="lineno"> 325</span>                     Toast toast2 = Toast.makeText(context, "Extract ReadConfigLog.txt from SD CARD", 5000);
+<span class="lineno"> 326</span>                 }
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cjava%5Ccom%5Cbeboo%5Cwifibackupandrestore%5CWIFIConfAccess.java">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\java\com\beboo\wifibackupandrestore\WIFIConfAccess.java</a>:324</span>: <span class="message">Expected duration Toast.LENGTH_SHORT or Toast.LENGTH_LONG, a custom duration value is not supported</span><br /><pre class="errorlines">
+<span class="lineno"> 321</span>                     result = (String) wcefSetValue.invoke(wcefClientCert.get(config), new Object[]{});
+<span class="lineno"> 322</span>                     Log.d("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>", "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 323</span>                     //out.write("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>" + "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 324</span>                     Toast toast1 = Toast.makeText(context, "All config data logged to ReadConfigLog.txt", <span class="errorspan">3000);</span>
+<span class="lineno"> 325</span>                     Toast toast2 = Toast.makeText(context, "Extract ReadConfigLog.txt from SD CARD", 5000);
+<span class="lineno"> 326</span>                 }
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cjava%5Ccom%5Cbeboo%5Cwifibackupandrestore%5CWIFIConfAccess.java">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\java\com\beboo\wifibackupandrestore\WIFIConfAccess.java</a>:324</span>: <span class="message">Toast created but not shown: did you forget to call show() ?</span><br /><pre class="errorlines">
+<span class="lineno"> 321</span>                     result = (String) wcefSetValue.invoke(wcefClientCert.get(config), new Object[]{});
+<span class="lineno"> 322</span>                     Log.d("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>", "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 323</span>                     //out.write("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>" + "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 324</span>                     Toast toast1 = <span class="errorspan">Toast.makeText(context, "All config data logged to ReadConfigLog.txt", 3000);</span>
+<span class="lineno"> 325</span>                     Toast toast2 = Toast.makeText(context, "Extract ReadConfigLog.txt from SD CARD", 5000);
+<span class="lineno"> 326</span>                 }
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cjava%5Ccom%5Cbeboo%5Cwifibackupandrestore%5CWIFIConfAccess.java">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\java\com\beboo\wifibackupandrestore\WIFIConfAccess.java</a>:324</span>: <span class="message">Toast created but not shown: did you forget to call show() ?</span><br /><pre class="errorlines">
+<span class="lineno"> 321</span>                     result = (String) wcefSetValue.invoke(wcefClientCert.get(config), new Object[]{});
+<span class="lineno"> 322</span>                     Log.d("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>", "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 323</span>                     //out.write("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>" + "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 324</span>                     Toast toast1 = <span class="errorspan">Toast.makeText(context, "All config data logged to ReadConfigLog.txt", 3000);</span>
+<span class="lineno"> 325</span>                     Toast toast2 = Toast.makeText(context, "Extract ReadConfigLog.txt from SD CARD", 5000);
+<span class="lineno"> 326</span>                 }
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cjava%5Ccom%5Cbeboo%5Cwifibackupandrestore%5CWIFIConfAccess.java">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\java\com\beboo\wifibackupandrestore\WIFIConfAccess.java</a>:325</span>: <span class="message">Expected duration Toast.LENGTH_SHORT or Toast.LENGTH_LONG, a custom duration value is not supported</span><br /><pre class="errorlines">
+<span class="lineno"> 322</span>                     Log.d("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>", "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 323</span>                     //out.write("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>" + "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 324</span>                     Toast toast1 = Toast.makeText(context, "All config data logged to ReadConfigLog.txt", 3000);
+<span class="lineno"> 325</span>                     Toast toast2 = Toast.makeText(context, "Extract ReadConfigLog.txt from SD CARD", <span class="errorspan">5000);</span>
+<span class="lineno"> 326</span>                 }
+<span class="lineno"> 327</span> 
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cjava%5Ccom%5Cbeboo%5Cwifibackupandrestore%5CWIFIConfAccess.java">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\java\com\beboo\wifibackupandrestore\WIFIConfAccess.java</a>:325</span>: <span class="message">Expected duration Toast.LENGTH_SHORT or Toast.LENGTH_LONG, a custom duration value is not supported</span><br /><pre class="errorlines">
+<span class="lineno"> 322</span>                     Log.d("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>", "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 323</span>                     //out.write("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>" + "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 324</span>                     Toast toast1 = Toast.makeText(context, "All config data logged to ReadConfigLog.txt", 3000);
+<span class="lineno"> 325</span>                     Toast toast2 = Toast.makeText(context, "Extract ReadConfigLog.txt from SD CARD", <span class="errorspan">5000);</span>
+<span class="lineno"> 326</span>                 }
+<span class="lineno"> 327</span> 
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cjava%5Ccom%5Cbeboo%5Cwifibackupandrestore%5CWIFIConfAccess.java">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\java\com\beboo\wifibackupandrestore\WIFIConfAccess.java</a>:325</span>: <span class="message">Toast created but not shown: did you forget to call show() ?</span><br /><pre class="errorlines">
+<span class="lineno"> 322</span>                     Log.d("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>", "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 323</span>                     //out.write("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>" + "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 324</span>                     Toast toast1 = Toast.makeText(context, "All config data logged to ReadConfigLog.txt", 3000);
+<span class="lineno"> 325</span>                     Toast toast2 = <span class="errorspan">Toast.makeText(context, "Extract ReadConfigLog.txt from SD CARD", 5000);</span>
+<span class="lineno"> 326</span>                 }
+<span class="lineno"> 327</span> 
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cjava%5Ccom%5Cbeboo%5Cwifibackupandrestore%5CWIFIConfAccess.java">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\java\com\beboo\wifibackupandrestore\WIFIConfAccess.java</a>:325</span>: <span class="message">Toast created but not shown: did you forget to call show() ?</span><br /><pre class="errorlines">
+<span class="lineno"> 322</span>                     Log.d("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>", "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 323</span>                     //out.write("&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;WifiPreference>>>>>>>>>>>>" + "[EAP CLIENT CERT]" + result);
+<span class="lineno"> 324</span>                     Toast toast1 = Toast.makeText(context, "All config data logged to ReadConfigLog.txt", 3000);
+<span class="lineno"> 325</span>                     Toast toast2 = <span class="errorspan">Toast.makeText(context, "Extract ReadConfigLog.txt from SD CARD", 5000);</span>
+<span class="lineno"> 326</span>                 }
+<span class="lineno"> 327</span> 
+</pre>
+</div>
+<div class="metadata">Priority: 6 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for code creating a <code>Toast</code> but forgetting to call <code>show()</code> on it.</div>
+<div class="explanation">
+<code>Toast.makeText()</code> creates a <code>Toast</code> but does <b>not</b> show it. You must call <code>show()</code> on the resulting object to actually make the <code>Toast</code> appear.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "ShowToast" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="SpUsage"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">SpUsage: Using <code>dp</code> instead of <code>sp</code> for text sizes</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues%5Cstyle.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values\style.xml</a>:6</span>: <span class="message">Should use "sp" instead of "dp" for text sizes</span><br /><pre class="errorlines">
+<span class="lineno">   3</span> 
+<span class="lineno">   4</span>     &lt;!-- Header -->
+<span class="lineno">   5</span>     &lt;style name="AliasTitle">
+<span class="lineno">   6</span>         &lt;item name="android:textSize"><span class="errorspan">16dip&lt;/item></span>
+<span class="lineno">   7</span>         &lt;item name="android:textStyle">bold&lt;/item>
+<span class="lineno">   8</span>     &lt;/style>
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues%5Cstyle.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values\style.xml</a>:6</span>: <span class="message">Should use "sp" instead of "dp" for text sizes</span><br /><pre class="errorlines">
+<span class="lineno">   3</span> 
+<span class="lineno">   4</span>     &lt;!-- Header -->
+<span class="lineno">   5</span>     &lt;style name="AliasTitle">
+<span class="lineno">   6</span>         &lt;item name="android:textSize"><span class="errorspan">16dip&lt;/item></span>
+<span class="lineno">   7</span>         &lt;item name="android:textStyle">bold&lt;/item>
+<span class="lineno">   8</span>     &lt;/style>
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues%5Cstyle.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values\style.xml</a>:11</span>: <span class="message">Should use "sp" instead of "dp" for text sizes</span><br /><pre class="errorlines">
+<span class="lineno">   8</span>     &lt;/style>
+<span class="lineno">   9</span> 
+<span class="lineno">  10</span>     &lt;style name="techStyle">
+<span class="lineno">  11</span>         &lt;item name="android:textSize"><span class="errorspan">11dip&lt;/item></span>
+<span class="lineno">  12</span>         &lt;item name="android:textStyle">normal&lt;/item>
+<span class="lineno">  13</span>     &lt;/style>
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues%5Cstyle.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values\style.xml</a>:11</span>: <span class="message">Should use "sp" instead of "dp" for text sizes</span><br /><pre class="errorlines">
+<span class="lineno">   8</span>     &lt;/style>
+<span class="lineno">   9</span> 
+<span class="lineno">  10</span>     &lt;style name="techStyle">
+<span class="lineno">  11</span>         &lt;item name="android:textSize"><span class="errorspan">11dip&lt;/item></span>
+<span class="lineno">  12</span>         &lt;item name="android:textStyle">normal&lt;/item>
+<span class="lineno">  13</span>     &lt;/style>
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues%5Cstyle.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values\style.xml</a>:16</span>: <span class="message">Should use "sp" instead of "dp" for text sizes</span><br /><pre class="errorlines">
+<span class="lineno">  13</span>     &lt;/style>
+<span class="lineno">  14</span> 
+<span class="lineno">  15</span>     &lt;style name="stateStyle">
+<span class="lineno">  16</span>         &lt;item name="android:textSize"><span class="errorspan">11dip&lt;/item></span>
+<span class="lineno">  17</span>         &lt;item name="android:textStyle">normal&lt;/item>
+<span class="lineno">  18</span>         &lt;item name="android:textColor">@android:color/holo_blue_light&lt;/item> &lt;!-- #ff33b5e5 -->
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues%5Cstyle.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values\style.xml</a>:16</span>: <span class="message">Should use "sp" instead of "dp" for text sizes</span><br /><pre class="errorlines">
+<span class="lineno">  13</span>     &lt;/style>
+<span class="lineno">  14</span> 
+<span class="lineno">  15</span>     &lt;style name="stateStyle">
+<span class="lineno">  16</span>         &lt;item name="android:textSize"><span class="errorspan">11dip&lt;/item></span>
+<span class="lineno">  17</span>         &lt;item name="android:textStyle">normal&lt;/item>
+<span class="lineno">  18</span>         &lt;item name="android:textColor">@android:color/holo_blue_light&lt;/item> &lt;!-- #ff33b5e5 -->
+</pre>
+</div>
+<div class="metadata">Priority: 3 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for uses of <code>dp</code> instead of <code>sp</code> dimensions for text sizes.</div>
+<div class="explanation">
+When setting text sizes, you should normally use <code>sp</code>, or "scale-independent pixels". This is like the <code>dp</code> unit, but it is also scaled by the user's font size preference. It is recommend you use this unit when specifying font sizes, so they will be adjusted for both the screen density and the user's preference.<br/>
+<br/>
+There <b>are</b> cases where you might need to use <code>dp</code>; typically this happens when the text is in a container with a specific dp-size. This will prevent the text from spilling outside the container. Note however that this means that the user's font size settings are not respected, so consider adjusting the layout itself to be more flexible.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/training/multiscreen/screendensities.html">http://developer.android.com/training/multiscreen/screendensities.html</a>
+</div><br/>To suppress this error, use the issue id "SpUsage" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="Deprecated"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">Deprecated: Using deprecated resources</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cwait.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\wait.xml</a>:2</span>: <span class="message">AbsoluteLayout is deprecated</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> &lt;?xml version="1.0" encoding="utf-8"?>
+<span class="lineno">   2</span> <span class="errorspan">&lt;AbsoluteLayout android:id="@+id/AbsoluteLayout"</span>
+<span class="lineno">   3</span>     android:layout_width="fill_parent" android:layout_height="fill_parent"
+<span class="lineno">   4</span>     xmlns:android="http://schemas.android.com/apk/res/android">
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cwait.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\wait.xml</a>:2</span>: <span class="message">AbsoluteLayout is deprecated</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> &lt;?xml version="1.0" encoding="utf-8"?>
+<span class="lineno">   2</span> <span class="errorspan">&lt;AbsoluteLayout android:id="@+id/AbsoluteLayout"</span>
+<span class="lineno">   3</span>     android:layout_width="fill_parent" android:layout_height="fill_parent"
+<span class="lineno">   4</span>     xmlns:android="http://schemas.android.com/apk/res/android">
+</pre>
+</div>
+<div class="metadata">Priority: 2 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for usages of deprecated layouts, attributes, and so on.</div>
+<div class="explanation">
+Deprecated views, attributes and so on are deprecated because there is a better way to do something. Do it that new way. You've been warned.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "Deprecated" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="MangledCRLF"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">MangledCRLF: Mangled file line endings</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cviewdialog.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\viewdialog.xml</a>:43</span>: <span class="message">Incorrect line ending: found carriage return (\r) without corresponding newline (\n)</span><br /><pre class="errorlines">
+<span class="lineno">  40</span>               android:layout_height="wrap_content"
+<span class="lineno">  41</span>               android:textColor="#BBB"
+<span class="lineno">  42</span>               android:paddingBottom="10dip"
+<span class="lineno">  43</span> <span class="errorspan">              /></span>
+<span class="lineno">  44</span>     
+<span class="lineno">  45</span>     &lt;Button
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cviewdialog.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\viewdialog.xml</a>:43</span>: <span class="message">Incorrect line ending: found carriage return (\r) without corresponding newline (\n)</span><br /><pre class="errorlines">
+<span class="lineno">  40</span>               android:layout_height="wrap_content"
+<span class="lineno">  41</span>               android:textColor="#BBB"
+<span class="lineno">  42</span>               android:paddingBottom="10dip"
+<span class="lineno">  43</span> <span class="errorspan">              /></span>
+<span class="lineno">  44</span>     
+<span class="lineno">  45</span>     &lt;Button
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 2 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="error">Error</span><div class="summary">
+Explanation: Checks that files with DOS line endings are consistent.</div>
+<div class="explanation">
+On Windows, line endings are typically recorded as carriage return plus newline: \r\n.<br/>
+<br/>
+This detector looks for invalid line endings with repeated carriage return characters (without newlines). Previous versions of the ADT plugin could accidentally introduce these into the file, and when editing the file, the editor could produce confusing visual artifacts.
+</div>
+<br/><div class="moreinfo">More info: <a href="https://bugs.eclipse.org/bugs/show_bug.cgi?id=375421">https://bugs.eclipse.org/bugs/show_bug.cgi?id=375421</a>
+</div><br/>To suppress this error, use the issue id "MangledCRLF" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Security"></a>
+<div class="category"><a href="#" title="Return to top">Security</a><div class="categorySeparator"></div>
+</div>
+<a name="AllowBackup"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">AllowBackup: Missing <code>allowBackup</code> attribute</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5CAndroidManifest.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\AndroidManifest.xml</a>:17</span>: <span class="message">Should explicitly set android:allowBackup to true or false (it's true by default, and that can have some security implications for the application's data)</span><br /><pre class="errorlines">
+<span class="lineno">  14</span>     &lt;uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<span class="lineno">  15</span>     &lt;uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+<span class="lineno">  16</span> 
+<span class="lineno">  17</span>     <span class="errorspan">&lt;application</span>
+<span class="lineno">  18</span>         android:icon="@drawable/icon"
+<span class="lineno">  19</span>         android:label="@string/app_name" >
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5CAndroidManifest.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\AndroidManifest.xml</a>:17</span>: <span class="message">Should explicitly set android:allowBackup to true or false (it's true by default, and that can have some security implications for the application's data)</span><br /><pre class="errorlines">
+<span class="lineno">  14</span>     &lt;uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<span class="lineno">  15</span>     &lt;uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+<span class="lineno">  16</span> 
+<span class="lineno">  17</span>     <span class="errorspan">&lt;application</span>
+<span class="lineno">  18</span>         android:icon="@drawable/icon"
+<span class="lineno">  19</span>         android:label="@string/app_name" >
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 3 / 10<br/>
+Category: Security</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Ensure that allowBackup is explicitly set in the application's manifest.</div>
+<div class="explanation">
+The allowBackup attribute determines if an application's data can be backed up and restored. It is documented at <a href="http://developer.android.com/reference/android/R.attr.html#allowBackup">http://developer.android.com/reference/android/R.attr.html#allowBackup</a><br/>
+<br/>
+By default, this flag is set to <code>true</code>. When this flag is set to <code>true</code>, application data can be backed up and restored by the user using <code>adb backup</code> and <code>adb restore</code>.<br/>
+<br/>
+This may have security consequences for an application. <code>adb backup</code> allows users who have enabled USB debugging to copy application data off of the device. Once backed up, all application data can be read by the user. <code>adb restore</code> allows creation of application data from a source specified by the user. Following a restore, applications should not assume that the data, file permissions, and directory permissions were created by the application itself.<br/>
+<br/>
+Setting <code>allowBackup="false"</code> opts an application out of both backup and restore.<br/>
+<br/>
+To fix this warning, decide whether your application should support backup, and explicitly set <code>android:allowBackup=(true|false)"</code>
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/reference/android/R.attr.html#allowBackup">http://developer.android.com/reference/android/R.attr.html#allowBackup</a>
+</div><br/>To suppress this error, use the issue id "AllowBackup" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Performance"></a>
+<div class="category"><a href="#" title="Return to top">Performance</a><div class="categorySeparator"></div>
+</div>
+<a name="MergeRootFrame"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">MergeRootFrame: FrameLayout can be replaced with <code>&lt;merge></code> tag</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cactivity_main.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\activity_main.xml</a>:2</span>: <span class="message">This &lt;FrameLayout> can be replaced with a &lt;merge> tag</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> &lt;?xml version="1.0" encoding="utf-8"?>
+<span class="lineno">   2</span> <span class="errorspan">&lt;FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"</span>
+<span class="lineno">   3</span>     xmlns:tools="http://schemas.android.com/tools"
+<span class="lineno">   4</span>     android:id="@+id/container"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cactivity_main.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\activity_main.xml</a>:2</span>: <span class="message">This &lt;FrameLayout> can be replaced with a &lt;merge> tag</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> &lt;?xml version="1.0" encoding="utf-8"?>
+<span class="lineno">   2</span> <span class="errorspan">&lt;FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"</span>
+<span class="lineno">   3</span>     xmlns:tools="http://schemas.android.com/tools"
+<span class="lineno">   4</span>     android:id="@+id/container"
+</pre>
+</div>
+<div class="metadata">Priority: 4 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Checks whether a root &lt;FrameLayout> can be replaced with a <code>&lt;merge></code> tag.</div>
+<div class="explanation">
+If a <code>&lt;FrameLayout></code> is the root of a layout and does not provide background or padding etc, it can often be replaced with a <code>&lt;merge></code> tag which is slightly more efficient. Note that this depends on context, so make sure you understand how the <code>&lt;merge></code> tag works before proceeding.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html">http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html</a>
+</div><br/>To suppress this error, use the issue id "MergeRootFrame" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="UseSparseArrays"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">UseSparseArrays: HashMap can be replaced with SparseArray</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cjava%5Ccom%5Cbeboo%5Cwifibackupandrestore%5CMainActivity.java">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\java\com\beboo\wifibackupandrestore\MainActivity.java</a>:27</span>: <span class="message">Use new SparseArray&lt;NetworkListFragment>(...) instead for better performance</span><br /><pre class="errorlines">
+<span class="lineno">  24</span> 
+<span class="lineno">  25</span>     private static final String STATE_SELECTED_NAVIGATION_ITEM = "selected_navigation_item";
+<span class="lineno">  26</span> 	
+<span class="lineno">  27</span> 	private HashMap&lt;Integer, NetworkListFragment> fragments =<span class="errorspan">new HashMap&lt;Integer,NetworkListFragment>();</span>
+<span class="lineno">  28</span> 
+<span class="lineno">  29</span>     @Override
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cjava%5Ccom%5Cbeboo%5Cwifibackupandrestore%5CMainActivity.java">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\java\com\beboo\wifibackupandrestore\MainActivity.java</a>:27</span>: <span class="message">Use new SparseArray&lt;NetworkListFragment>(...) instead for better performance</span><br /><pre class="errorlines">
+<span class="lineno">  24</span> 
+<span class="lineno">  25</span>     private static final String STATE_SELECTED_NAVIGATION_ITEM = "selected_navigation_item";
+<span class="lineno">  26</span> 	
+<span class="lineno">  27</span> 	private HashMap&lt;Integer, NetworkListFragment> fragments =<span class="errorspan">new HashMap&lt;Integer,NetworkListFragment>();</span>
+<span class="lineno">  28</span> 
+<span class="lineno">  29</span>     @Override
+</pre>
+</div>
+<div class="metadata">Priority: 4 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for opportunities to replace HashMaps with the more efficient SparseArray.</div>
+<div class="explanation">
+For maps where the keys are of type integer, it's typically more efficient to use the Android <code>SparseArray</code> API. This check identifies scenarios where you might want to consider using <code>SparseArray</code> instead of <code>HashMap</code> for better performance.<br/>
+<br/>
+This is <b>particularly</b> useful when the value types are primitives like ints, where you can use <code>SparseIntArray</code> and avoid auto-boxing the values from <code>int</code> to <code>Integer</code>.<br/>
+<br/>
+If you need to construct a <code>HashMap</code> because you need to call an API outside of your control which requires a <code>Map</code>, you can suppress this warning using for example the <code>@SuppressLint</code> annotation.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UseSparseArrays" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="UnusedResources"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">UnusedResources: Unused resources</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Cactivity_main.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\activity_main.xml</a></span>: <span class="message">The resource R.menu.activity_main appears to be unused</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Cactivity_main.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\activity_main.xml</a></span>: <span class="message">The resource R.menu.activity_main appears to be unused</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Clist_fragment.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\list_fragment.xml</a></span>: <span class="message">The resource R.layout.list_fragment appears to be unused</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Clist_fragment.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\list_fragment.xml</a></span>: <span class="message">The resource R.layout.list_fragment appears to be unused</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Cmenu.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\menu.xml</a></span>: <span class="message">The resource R.menu.menu appears to be unused</span><br />
+<button id="UnusedResourcesDivLink" onclick="reveal('UnusedResourcesDiv');" />+ 15 More Occurrences...</button>
+<div id="UnusedResourcesDiv" style="display: none">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Cmenu.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\menu.xml</a></span>: <span class="message">The resource R.menu.menu appears to be unused</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Cmenu_main_activty.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\menu_main_activty.xml</a></span>: <span class="message">The resource R.menu.menu_main_activty appears to be unused</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Cmenu_main_activty.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\menu_main_activty.xml</a></span>: <span class="message">The resource R.menu.menu_main_activty appears to be unused</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values\strings.xml</a>:5</span>: <span class="message">The resource R.string.backup_success appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">   2</span> &lt;resources>
+<span class="lineno">   3</span> 	 &lt;string name="hello">Hello World, WIFIBackupAndRestoreActivity!&lt;/string>
+<span class="lineno">   4</span>     &lt;string name="app_name">WIFI Backup &amp;amp; Restore 2&lt;/string>
+<span class="lineno">   5</span>     &lt;string <span class="errorspan">name="backup_success">backup succeeded&lt;/string></span>
+<span class="lineno">   6</span>     &lt;string name="backup_failure">backup failed&lt;/string>
+<span class="lineno">   7</span>     &lt;string name="restore_success">restore succeeded&lt;/string>
+</pre>
+<ul></ul><button id="Location9DivLink" onclick="reveal('Location9Div');" />+ 1 Additional Locations...</button>
+<div id="Location9Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues-en%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values-en\strings.xml</a>:5</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values\strings.xml</a>:5</span>: <span class="message">The resource R.string.backup_success appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">   2</span> &lt;resources>
+<span class="lineno">   3</span> 	 &lt;string name="hello">Hello World, WIFIBackupAndRestoreActivity!&lt;/string>
+<span class="lineno">   4</span>     &lt;string name="app_name">WIFI Backup &amp;amp; Restore 2&lt;/string>
+<span class="lineno">   5</span>     &lt;string <span class="errorspan">name="backup_success">backup succeeded&lt;/string></span>
+<span class="lineno">   6</span>     &lt;string name="backup_failure">backup failed&lt;/string>
+<span class="lineno">   7</span>     &lt;string name="restore_success">restore succeeded&lt;/string>
+</pre>
+<ul></ul><button id="Location10DivLink" onclick="reveal('Location10Div');" />+ 1 Additional Locations...</button>
+<div id="Location10Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues-en%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values-en\strings.xml</a>:5</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values\strings.xml</a>:7</span>: <span class="message">The resource R.string.restore_success appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">   4</span>     &lt;string name="app_name">WIFI Backup &amp;amp; Restore 2&lt;/string>
+<span class="lineno">   5</span>     &lt;string name="backup_success">backup succeeded&lt;/string>
+<span class="lineno">   6</span>     &lt;string name="backup_failure">backup failed&lt;/string>
+<span class="lineno">   7</span>     &lt;string <span class="errorspan">name="restore_success">restore succeeded&lt;/string></span>
+<span class="lineno">   8</span>     &lt;string name="restore_failure">restore failed&lt;/string>
+<span class="lineno">   9</span> 	&lt;string name="backup">Backup&lt;/string>
+</pre>
+<ul></ul><button id="Location11DivLink" onclick="reveal('Location11Div');" />+ 1 Additional Locations...</button>
+<div id="Location11Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues-en%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values-en\strings.xml</a>:7</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values\strings.xml</a>:7</span>: <span class="message">The resource R.string.restore_success appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">   4</span>     &lt;string name="app_name">WIFI Backup &amp;amp; Restore 2&lt;/string>
+<span class="lineno">   5</span>     &lt;string name="backup_success">backup succeeded&lt;/string>
+<span class="lineno">   6</span>     &lt;string name="backup_failure">backup failed&lt;/string>
+<span class="lineno">   7</span>     &lt;string <span class="errorspan">name="restore_success">restore succeeded&lt;/string></span>
+<span class="lineno">   8</span>     &lt;string name="restore_failure">restore failed&lt;/string>
+<span class="lineno">   9</span> 	&lt;string name="backup">Backup&lt;/string>
+</pre>
+<ul></ul><button id="Location12DivLink" onclick="reveal('Location12Div');" />+ 1 Additional Locations...</button>
+<div id="Location12Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues-en%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values-en\strings.xml</a>:7</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values\strings.xml</a>:8</span>: <span class="message">The resource R.string.restore_failure appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">   5</span>     &lt;string name="backup_success">backup succeeded&lt;/string>
+<span class="lineno">   6</span>     &lt;string name="backup_failure">backup failed&lt;/string>
+<span class="lineno">   7</span>     &lt;string name="restore_success">restore succeeded&lt;/string>
+<span class="lineno">   8</span>     &lt;string <span class="errorspan">name="restore_failure">restore failed&lt;/string></span>
+<span class="lineno">   9</span> 	&lt;string name="backup">Backup&lt;/string>
+<span class="lineno">  10</span> 	&lt;string name="restore">Restore&lt;/string>
+</pre>
+<ul></ul><button id="Location13DivLink" onclick="reveal('Location13Div');" />+ 1 Additional Locations...</button>
+<div id="Location13Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues-en%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values-en\strings.xml</a>:8</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values\strings.xml</a>:8</span>: <span class="message">The resource R.string.restore_failure appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">   5</span>     &lt;string name="backup_success">backup succeeded&lt;/string>
+<span class="lineno">   6</span>     &lt;string name="backup_failure">backup failed&lt;/string>
+<span class="lineno">   7</span>     &lt;string name="restore_success">restore succeeded&lt;/string>
+<span class="lineno">   8</span>     &lt;string <span class="errorspan">name="restore_failure">restore failed&lt;/string></span>
+<span class="lineno">   9</span> 	&lt;string name="backup">Backup&lt;/string>
+<span class="lineno">  10</span> 	&lt;string name="restore">Restore&lt;/string>
+</pre>
+<ul></ul><button id="Location14DivLink" onclick="reveal('Location14Div');" />+ 1 Additional Locations...</button>
+<div id="Location14Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues-en%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values-en\strings.xml</a>:8</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values\strings.xml</a>:15</span>: <span class="message">The resource R.string.confirm_restore appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  12</span> 	&lt;string name="configureds">configured&lt;/string>
+<span class="lineno">  13</span> 	&lt;string name="backuped">backuped&lt;/string>
+<span class="lineno">  14</span> 	&lt;string name="configured">configured&lt;/string>
+<span class="lineno">  15</span> 	&lt;string <span class="errorspan">name="confirm_restore">Confirm restoration of networks :&lt;/string></span>
+<span class="lineno">  16</span> 	&lt;string name="ok">OK&lt;/string>
+<span class="lineno">  17</span> 	&lt;string name="cancel">Cancel&lt;/string>
+</pre>
+<ul></ul><button id="Location15DivLink" onclick="reveal('Location15Div');" />+ 1 Additional Locations...</button>
+<div id="Location15Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues-en%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values-en\strings.xml</a>:15</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values\strings.xml</a>:15</span>: <span class="message">The resource R.string.confirm_restore appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  12</span> 	&lt;string name="configureds">configured&lt;/string>
+<span class="lineno">  13</span> 	&lt;string name="backuped">backuped&lt;/string>
+<span class="lineno">  14</span> 	&lt;string name="configured">configured&lt;/string>
+<span class="lineno">  15</span> 	&lt;string <span class="errorspan">name="confirm_restore">Confirm restoration of networks :&lt;/string></span>
+<span class="lineno">  16</span> 	&lt;string name="ok">OK&lt;/string>
+<span class="lineno">  17</span> 	&lt;string name="cancel">Cancel&lt;/string>
+</pre>
+<ul></ul><button id="Location16DivLink" onclick="reveal('Location16Div');" />+ 1 Additional Locations...</button>
+<div id="Location16Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cvalues-en%5Cstrings.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\values-en\strings.xml</a>:15</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cviewdialog.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\viewdialog.xml</a></span>: <span class="message">The resource R.layout.viewdialog appears to be unused</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cviewdialog.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\viewdialog.xml</a></span>: <span class="message">The resource R.layout.viewdialog appears to be unused</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cwait.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\wait.xml</a></span>: <span class="message">The resource R.layout.wait appears to be unused</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cwait.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\wait.xml</a></span>: <span class="message">The resource R.layout.wait appears to be unused</span><br />
+</div>
+</div>
+<div class="metadata">Priority: 3 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for unused resources.</div>
+<div class="explanation">
+Unused resources make applications larger and slow down builds.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UnusedResources" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="UselessParent"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">UselessParent: Useless parent layout</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Conelinelist2.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml</a>:49</span>: <span class="message">This LinearLayout layout or its LinearLayout parent is possibly useless</span><br /><pre class="errorlines">
+<span class="lineno">  46</span>         android:orientation="horizontal" >   
+<span class="lineno">  47</span>         
+<span class="lineno">  48</span>         
+<span class="lineno">  49</span>     <span class="errorspan">&lt;LinearLayout</span>
+<span class="lineno">  50</span>         android:id="@+id/linearLayout1"
+<span class="lineno">  51</span>         android:layout_width="wrap_content"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Conelinelist2.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml</a>:49</span>: <span class="message">This LinearLayout layout or its LinearLayout parent is possibly useless</span><br /><pre class="errorlines">
+<span class="lineno">  46</span>         android:orientation="horizontal" >   
+<span class="lineno">  47</span>         
+<span class="lineno">  48</span>         
+<span class="lineno">  49</span>     <span class="errorspan">&lt;LinearLayout</span>
+<span class="lineno">  50</span>         android:id="@+id/linearLayout1"
+<span class="lineno">  51</span>         android:layout_width="wrap_content"
+</pre>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 2 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Checks whether a parent layout can be removed.</div>
+<div class="explanation">
+A layout with children that has no siblings, is not a scrollview or a root layout, and does not have a background, can be removed and have its children moved directly into the parent for a flatter and more efficient layout hierarchy.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UselessParent" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Usability:Icons"></a>
+<div class="category"><a href="#" title="Return to top">Usability:Icons</a><div class="categorySeparator"></div>
+</div>
+<a name="IconDensities"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">IconDensities: Icon densities validation</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cdrawable-hdpi">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-hdpi</a></span>: <span class="message">Missing the following drawables in drawable-hdpi: ic_menu_refresh.png (found in drawable-mdpi)</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cdrawable-hdpi">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-hdpi</a></span>: <span class="message">Missing the following drawables in drawable-hdpi: ic_menu_refresh.png (found in drawable-mdpi)</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cdrawable-mdpi">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-mdpi</a></span>: <span class="message">Missing the following drawables in drawable-mdpi: ic_menu_copy_holo_dark.png, ic_menu_copy_holo_light.png</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cdrawable-mdpi">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-mdpi</a></span>: <span class="message">Missing the following drawables in drawable-mdpi: ic_menu_copy_holo_dark.png, ic_menu_copy_holo_light.png</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cdrawable-xhdpi">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-xhdpi</a></span>: <span class="message">Missing the following drawables in drawable-xhdpi: ic_menu_refresh.png (found in drawable-mdpi)</span><br />
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cdrawable-xhdpi">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-xhdpi</a></span>: <span class="message">Missing the following drawables in drawable-xhdpi: ic_menu_refresh.png (found in drawable-mdpi)</span><br />
+</div>
+<div class="metadata">Priority: 4 / 10<br/>
+Category: Usability:Icons</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Ensures that icons provide custom versions for all supported densities.</div>
+<div class="explanation">
+Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.<br/>
+<br/>
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable <code>ANDROID_LINT_INCLUDE_LDPI=true</code>. For more information on current density usage, see <a href="http://developer.android.com/resources/dashboard/screens.html">http://developer.android.com/resources/dashboard/screens.html</a>
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/screens_support.html">http://developer.android.com/guide/practices/screens_support.html</a>
+</div><br/>To suppress this error, use the issue id "IconDensities" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Usability"></a>
+<div class="category"><a href="#" title="Return to top">Usability</a><div class="categorySeparator"></div>
+</div>
+<a name="MenuTitle"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">MenuTitle: Missing menu title</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:3</span>: <span class="message">Menu items should specify a title</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> &lt;?xml version="1.0" encoding="utf-8"?>
+<span class="lineno">   2</span> &lt;menu xmlns:android="http://schemas.android.com/apk/res/android">
+<span class="lineno">   3</span>     <span class="errorspan">&lt;item</span>
+<span class="lineno">   4</span>             android:id="@+id/restore_network_action"
+<span class="lineno">   5</span>             android:icon="@drawable/ic_menu_copy_holo_dark"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:3</span>: <span class="message">Menu items should specify a title</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> &lt;?xml version="1.0" encoding="utf-8"?>
+<span class="lineno">   2</span> &lt;menu xmlns:android="http://schemas.android.com/apk/res/android">
+<span class="lineno">   3</span>     <span class="errorspan">&lt;item</span>
+<span class="lineno">   4</span>             android:id="@+id/restore_network_action"
+<span class="lineno">   5</span>             android:icon="@drawable/ic_menu_copy_holo_dark"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:8</span>: <span class="message">Menu items should specify a title</span><br /><pre class="errorlines">
+<span class="lineno">   5</span>             android:icon="@drawable/ic_menu_copy_holo_dark"
+<span class="lineno">   6</span>             android:showAsAction="always">
+<span class="lineno">   7</span>     &lt;/item>
+<span class="lineno">   8</span>     <span class="errorspan">&lt;item</span>
+<span class="lineno">   9</span>             android:id="@+id/view_backup_network_action"
+<span class="lineno">  10</span>             android:icon="@android:drawable/ic_menu_view"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:8</span>: <span class="message">Menu items should specify a title</span><br /><pre class="errorlines">
+<span class="lineno">   5</span>             android:icon="@drawable/ic_menu_copy_holo_dark"
+<span class="lineno">   6</span>             android:showAsAction="always">
+<span class="lineno">   7</span>     &lt;/item>
+<span class="lineno">   8</span>     <span class="errorspan">&lt;item</span>
+<span class="lineno">   9</span>             android:id="@+id/view_backup_network_action"
+<span class="lineno">  10</span>             android:icon="@android:drawable/ic_menu_view"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:14</span>: <span class="message">Menu items should specify a title</span><br /><pre class="errorlines">
+<span class="lineno">  11</span>             android:showAsAction="always">
+<span class="lineno">  12</span>     &lt;/item>
+<span class="lineno">  13</span> 
+<span class="lineno">  14</span>     <span class="errorspan">&lt;item</span>
+<span class="lineno">  15</span>             android:id="@+id/edit_backup_network_action"
+<span class="lineno">  16</span>             android:icon="@android:drawable/ic_menu_edit"
+</pre>
+<button id="MenuTitleDivLink" onclick="reveal('MenuTitleDiv');" />+ 7 More Occurrences...</button>
+<div id="MenuTitleDiv" style="display: none">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:14</span>: <span class="message">Menu items should specify a title</span><br /><pre class="errorlines">
+<span class="lineno">  11</span>             android:showAsAction="always">
+<span class="lineno">  12</span>     &lt;/item>
+<span class="lineno">  13</span> 
+<span class="lineno">  14</span>     <span class="errorspan">&lt;item</span>
+<span class="lineno">  15</span>             android:id="@+id/edit_backup_network_action"
+<span class="lineno">  16</span>             android:icon="@android:drawable/ic_menu_edit"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:19</span>: <span class="message">Menu items should specify a title</span><br /><pre class="errorlines">
+<span class="lineno">  16</span>             android:icon="@android:drawable/ic_menu_edit"
+<span class="lineno">  17</span>             android:showAsAction="always">
+<span class="lineno">  18</span>     &lt;/item>
+<span class="lineno">  19</span>     <span class="errorspan">&lt;item</span>
+<span class="lineno">  20</span>             android:id="@+id/delete_backup_network_action"
+<span class="lineno">  21</span>             android:icon="@android:drawable/ic_menu_delete"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:19</span>: <span class="message">Menu items should specify a title</span><br /><pre class="errorlines">
+<span class="lineno">  16</span>             android:icon="@android:drawable/ic_menu_edit"
+<span class="lineno">  17</span>             android:showAsAction="always">
+<span class="lineno">  18</span>     &lt;/item>
+<span class="lineno">  19</span>     <span class="errorspan">&lt;item</span>
+<span class="lineno">  20</span>             android:id="@+id/delete_backup_network_action"
+<span class="lineno">  21</span>             android:icon="@android:drawable/ic_menu_delete"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_configured.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_configured.xml</a>:3</span>: <span class="message">Menu items should specify a title</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> &lt;?xml version="1.0" encoding="utf-8"?>
+<span class="lineno">   2</span> &lt;menu xmlns:android="http://schemas.android.com/apk/res/android">
+<span class="lineno">   3</span> 	<span class="errorspan">&lt;item </span>
+<span class="lineno">   4</span>      	 android:id="@+id/save_network_action"
+<span class="lineno">   5</span>          android:icon="@android:drawable/ic_menu_save"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_configured.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_configured.xml</a>:3</span>: <span class="message">Menu items should specify a title</span><br /><pre class="errorlines">
+<span class="lineno">   1</span> &lt;?xml version="1.0" encoding="utf-8"?>
+<span class="lineno">   2</span> &lt;menu xmlns:android="http://schemas.android.com/apk/res/android">
+<span class="lineno">   3</span> 	<span class="errorspan">&lt;item </span>
+<span class="lineno">   4</span>      	 android:id="@+id/save_network_action"
+<span class="lineno">   5</span>          android:icon="@android:drawable/ic_menu_save"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_configured.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_configured.xml</a>:8</span>: <span class="message">Menu items should specify a title</span><br /><pre class="errorlines">
+<span class="lineno">   5</span>          android:icon="@android:drawable/ic_menu_save"
+<span class="lineno">   6</span>          android:showAsAction="always">
+<span class="lineno">   7</span> 	&lt;/item>
+<span class="lineno">   8</span> 	<span class="errorspan">&lt;item</span>
+<span class="lineno">   9</span>        android:id="@+id/view_conf_network_action"
+<span class="lineno">  10</span>        android:icon="@android:drawable/ic_menu_view"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_configured.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_configured.xml</a>:8</span>: <span class="message">Menu items should specify a title</span><br /><pre class="errorlines">
+<span class="lineno">   5</span>          android:icon="@android:drawable/ic_menu_save"
+<span class="lineno">   6</span>          android:showAsAction="always">
+<span class="lineno">   7</span> 	&lt;/item>
+<span class="lineno">   8</span> 	<span class="errorspan">&lt;item</span>
+<span class="lineno">   9</span>        android:id="@+id/view_conf_network_action"
+<span class="lineno">  10</span>        android:icon="@android:drawable/ic_menu_view"
+</pre>
+</div>
+</div>
+<div class="metadata">Priority: 5 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Ensures that all menu items supply a title.</div>
+<div class="explanation">
+From the action bar documentation:<br/>
+"It's important that you always define android:title for each menu item &#8212; even if you don't declare that the title appear with the action item &#8212; for three reasons:<br/>
+<br/>
+* If there's not enough room in the action bar for the action item, the menu item appears in the overflow menu and only the title appears.<br/>
+* Screen readers for sight-impaired users read the menu item's title.<br/>
+* If the action item appears with only the icon, a user can long-press the item to reveal a tool-tip that displays the action item's title.<br/>
+The android:icon is always optional, but recommended.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/topics/ui/actionbar.html">http://developer.android.com/guide/topics/ui/actionbar.html</a>
+</div><br/>To suppress this error, use the issue id "MenuTitle" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="AlwaysShowAction"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">AlwaysShowAction: Usage of <code>showAsAction=always</code></a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:6</span>: <span class="message">Prefer "ifRoom" instead of "always"</span><br /><pre class="errorlines">
+<span class="lineno">   3</span>     &lt;item
+<span class="lineno">   4</span>             android:id="@+id/restore_network_action"
+<span class="lineno">   5</span>             android:icon="@drawable/ic_menu_copy_holo_dark"
+<span class="lineno">   6</span>             <span class="errorspan">android:showAsAction="always"></span>
+<span class="lineno">   7</span>     &lt;/item>
+<span class="lineno">   8</span>     &lt;item
+</pre>
+<ul></ul><button id="Location1DivLink" onclick="reveal('Location1Div');" />+ 3 Additional Locations...</button>
+<div id="Location1Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:11</span>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:17</span>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:22</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:6</span>: <span class="message">Prefer "ifRoom" instead of "always"</span><br /><pre class="errorlines">
+<span class="lineno">   3</span>     &lt;item
+<span class="lineno">   4</span>             android:id="@+id/restore_network_action"
+<span class="lineno">   5</span>             android:icon="@drawable/ic_menu_copy_holo_dark"
+<span class="lineno">   6</span>             <span class="errorspan">android:showAsAction="always"></span>
+<span class="lineno">   7</span>     &lt;/item>
+<span class="lineno">   8</span>     &lt;item
+</pre>
+<ul></ul><button id="Location2DivLink" onclick="reveal('Location2Div');" />+ 3 Additional Locations...</button>
+<div id="Location2Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:11</span>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:17</span>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_backuped.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_backuped.xml</a>:22</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_configured.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_configured.xml</a>:6</span>: <span class="message">Prefer "ifRoom" instead of "always"</span><br /><pre class="errorlines">
+<span class="lineno">   3</span> 	&lt;item 
+<span class="lineno">   4</span>      	 android:id="@+id/save_network_action"
+<span class="lineno">   5</span>          android:icon="@android:drawable/ic_menu_save"
+<span class="lineno">   6</span>          <span class="errorspan">android:showAsAction="always"></span>
+<span class="lineno">   7</span> 	&lt;/item>
+<span class="lineno">   8</span> 	&lt;item
+</pre>
+<ul></ul><button id="Location3DivLink" onclick="reveal('Location3Div');" />+ 1 Additional Locations...</button>
+<div id="Location3Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_configured.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_configured.xml</a>:11</span>
+</ul>
+</div><br/><br/>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_configured.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_configured.xml</a>:6</span>: <span class="message">Prefer "ifRoom" instead of "always"</span><br /><pre class="errorlines">
+<span class="lineno">   3</span> 	&lt;item 
+<span class="lineno">   4</span>      	 android:id="@+id/save_network_action"
+<span class="lineno">   5</span>          android:icon="@android:drawable/ic_menu_save"
+<span class="lineno">   6</span>          <span class="errorspan">android:showAsAction="always"></span>
+<span class="lineno">   7</span> 	&lt;/item>
+<span class="lineno">   8</span> 	&lt;item
+</pre>
+<ul></ul><button id="Location4DivLink" onclick="reveal('Location4Div');" />+ 1 Additional Locations...</button>
+<div id="Location4Div" style="display: none">
+Additional locations: <ul>
+<li> <span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Cmenu%5Ccontextmode_configured.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\menu\contextmode_configured.xml</a>:11</span>
+</ul>
+</div><br/><br/>
+</div>
+<div class="metadata">Priority: 3 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Checks for uses of <code>showAsAction="always"</code> and suggests <code>showAsAction="ifRoom"</code> instead.</div>
+<div class="explanation">
+Using <code>showAsAction="always"</code> in menu XML, or <code>MenuItem.SHOW_AS_ACTION_ALWAYS</code> in Java code is usually a deviation from the user interface style guide.Use <code>ifRoom</code> or the corresponding <code>MenuItem.SHOW_AS_ACTION_IF_ROOM</code> instead.<br/>
+<br/>
+If <code>always</code> is used sparingly there are usually no problems and behavior is roughly equivalent to <code>ifRoom</code> but with preference over other <code>ifRoom</code> items. Using it more than twice in the same menu is a bad idea.<br/>
+<br/>
+This check looks for menu XML files that contain more than two <code>always</code> actions, or some <code>always</code> actions and no <code>ifRoom</code> actions. In Java code, it looks for projects that contain references to <code>MenuItem.SHOW_AS_ACTION_ALWAYS</code> and no references to <code>MenuItem.SHOW_AS_ACTION_IF_ROOM</code>.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/patterns/actionbar.html">http://developer.android.com/design/patterns/actionbar.html</a>
+</div><br/>To suppress this error, use the issue id "AlwaysShowAction" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="Internationalization"></a>
+<div class="category"><a href="#" title="Return to top">Internationalization</a><div class="categorySeparator"></div>
+</div>
+<a name="HardcodedText"></a>
+<div class="issue">
+<div class="id"><a href="#" title="Return to top">HardcodedText: Hardcoded text</a><div class="issueSeparator"></div>
+</div>
+<div class="warningslist">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Conelinelist2.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml</a>:22</span>: <span class="message">[I18N] Hardcoded string "Maison", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  19</span>             style="@style/AliasTitle"
+<span class="lineno">  20</span>             android:layout_width="wrap_content"
+<span class="lineno">  21</span>             android:layout_height="wrap_content"
+<span class="lineno">  22</span>             <span class="errorspan">android:text="Maison" /></span>
+<span class="lineno">  23</span> 
+<span class="lineno">  24</span>         &lt;TextView
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Conelinelist2.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml</a>:22</span>: <span class="message">[I18N] Hardcoded string "Maison", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  19</span>             style="@style/AliasTitle"
+<span class="lineno">  20</span>             android:layout_width="wrap_content"
+<span class="lineno">  21</span>             android:layout_height="wrap_content"
+<span class="lineno">  22</span>             <span class="errorspan">android:text="Maison" /></span>
+<span class="lineno">  23</span> 
+<span class="lineno">  24</span>         &lt;TextView
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Conelinelist2.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml</a>:29</span>: <span class="message">[I18N] Hardcoded string "217946D9293E574379A6265AAA", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  26</span>             style="@style/techStyle"
+<span class="lineno">  27</span>             android:layout_width="wrap_content"
+<span class="lineno">  28</span>             android:layout_height="wrap_content"
+<span class="lineno">  29</span>             <span class="errorspan">android:text="217946D9293E574379A6265AAA" /></span>
+<span class="lineno">  30</span>         
+<span class="lineno">  31</span>         
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Conelinelist2.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml</a>:29</span>: <span class="message">[I18N] Hardcoded string "217946D9293E574379A6265AAA", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  26</span>             style="@style/techStyle"
+<span class="lineno">  27</span>             android:layout_width="wrap_content"
+<span class="lineno">  28</span>             android:layout_height="wrap_content"
+<span class="lineno">  29</span>             <span class="errorspan">android:text="217946D9293E574379A6265AAA" /></span>
+<span class="lineno">  30</span>         
+<span class="lineno">  31</span>         
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Conelinelist2.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml</a>:38</span>: <span class="message">[I18N] Hardcoded string "WPA_PSK", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  35</span>             style="@style/techStyle"
+<span class="lineno">  36</span>             android:layout_width="wrap_content"
+<span class="lineno">  37</span>             android:layout_height="wrap_content"
+<span class="lineno">  38</span>             <span class="errorspan">android:text="WPA_PSK" /></span>
+<span class="lineno">  39</span>     &lt;/LinearLayout>
+<span class="lineno">  40</span> 
+</pre>
+<button id="HardcodedTextDivLink" onclick="reveal('HardcodedTextDiv');" />+ 11 More Occurrences...</button>
+<div id="HardcodedTextDiv" style="display: none">
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Conelinelist2.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml</a>:38</span>: <span class="message">[I18N] Hardcoded string "WPA_PSK", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  35</span>             style="@style/techStyle"
+<span class="lineno">  36</span>             android:layout_width="wrap_content"
+<span class="lineno">  37</span>             android:layout_height="wrap_content"
+<span class="lineno">  38</span>             <span class="errorspan">android:text="WPA_PSK" /></span>
+<span class="lineno">  39</span>     &lt;/LinearLayout>
+<span class="lineno">  40</span> 
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Conelinelist2.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml</a>:61</span>: <span class="message">[I18N] Hardcoded string "configured", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  58</span>             style="@style/stateStyle"
+<span class="lineno">  59</span>             android:layout_width="wrap_content"
+<span class="lineno">  60</span>             android:layout_height="wrap_content"
+<span class="lineno">  61</span>             <span class="errorspan">android:text="configured" /></span>
+<span class="lineno">  62</span>         
+<span class="lineno">  63</span>         
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Conelinelist2.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml</a>:61</span>: <span class="message">[I18N] Hardcoded string "configured", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  58</span>             style="@style/stateStyle"
+<span class="lineno">  59</span>             android:layout_width="wrap_content"
+<span class="lineno">  60</span>             android:layout_height="wrap_content"
+<span class="lineno">  61</span>             <span class="errorspan">android:text="configured" /></span>
+<span class="lineno">  62</span>         
+<span class="lineno">  63</span>         
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cviewdialog.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\viewdialog.xml</a>:13</span>: <span class="message">[I18N] Hardcoded string "quelque part", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  10</span>     
+<span class="lineno">  11</span>     
+<span class="lineno">  12</span>     &lt;TextView android:id="@+id/view_alias"
+<span class="lineno">  13</span>         <span class="errorspan">android:text="quelque part"</span>
+<span class="lineno">  14</span>               android:layout_width="fill_parent"
+<span class="lineno">  15</span>               android:layout_height="wrap_content"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cviewdialog.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\viewdialog.xml</a>:13</span>: <span class="message">[I18N] Hardcoded string "quelque part", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  10</span>     
+<span class="lineno">  11</span>     
+<span class="lineno">  12</span>     &lt;TextView android:id="@+id/view_alias"
+<span class="lineno">  13</span>         <span class="errorspan">android:text="quelque part"</span>
+<span class="lineno">  14</span>               android:layout_width="fill_parent"
+<span class="lineno">  15</span>               android:layout_height="wrap_content"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cviewdialog.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\viewdialog.xml</a>:22</span>: <span class="message">[I18N] Hardcoded string "Livebox-F42D", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  19</span>               />
+<span class="lineno">  20</span>     
+<span class="lineno">  21</span>     &lt;TextView android:id="@+id/view_ssid"
+<span class="lineno">  22</span>         <span class="errorspan">android:text="Livebox-F42D"</span>
+<span class="lineno">  23</span>         		android:layout_width="fill_parent"
+<span class="lineno">  24</span>               android:layout_height="wrap_content"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cviewdialog.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\viewdialog.xml</a>:22</span>: <span class="message">[I18N] Hardcoded string "Livebox-F42D", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  19</span>               />
+<span class="lineno">  20</span>     
+<span class="lineno">  21</span>     &lt;TextView android:id="@+id/view_ssid"
+<span class="lineno">  22</span>         <span class="errorspan">android:text="Livebox-F42D"</span>
+<span class="lineno">  23</span>         		android:layout_width="fill_parent"
+<span class="lineno">  24</span>               android:layout_height="wrap_content"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cviewdialog.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\viewdialog.xml</a>:30</span>: <span class="message">[I18N] Hardcoded string "WPA-PSK", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  27</span>               />
+<span class="lineno">  28</span>     
+<span class="lineno">  29</span>     &lt;TextView android:id="@+id/view_keymgmt"
+<span class="lineno">  30</span>         		<span class="errorspan">android:text="WPA-PSK"</span>
+<span class="lineno">  31</span>         		android:layout_width="fill_parent"
+<span class="lineno">  32</span>               android:layout_height="wrap_content"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cviewdialog.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\viewdialog.xml</a>:30</span>: <span class="message">[I18N] Hardcoded string "WPA-PSK", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  27</span>               />
+<span class="lineno">  28</span>     
+<span class="lineno">  29</span>     &lt;TextView android:id="@+id/view_keymgmt"
+<span class="lineno">  30</span>         		<span class="errorspan">android:text="WPA-PSK"</span>
+<span class="lineno">  31</span>         		android:layout_width="fill_parent"
+<span class="lineno">  32</span>               android:layout_height="wrap_content"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cviewdialog.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\viewdialog.xml</a>:38</span>: <span class="message">[I18N] Hardcoded string "1234123412341234", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  35</span>               />
+<span class="lineno">  36</span>     
+<span class="lineno">  37</span>     &lt;TextView android:id="@+id/view_psk"
+<span class="lineno">  38</span>         		<span class="errorspan">android:text="1234123412341234"</span>
+<span class="lineno">  39</span>         		android:layout_width="fill_parent"
+<span class="lineno">  40</span>               android:layout_height="wrap_content"
+</pre>
+<span class="location"><a href="file://C%3A%5CUsers%5Colivier%5CandroidStudioProjects2%5CWBR2%5Capp%5Csrc%5Cmain%5Cres%5Clayout%5Cviewdialog.xml">C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\viewdialog.xml</a>:38</span>: <span class="message">[I18N] Hardcoded string "1234123412341234", should use @string resource</span><br /><pre class="errorlines">
+<span class="lineno">  35</span>               />
+<span class="lineno">  36</span>     
+<span class="lineno">  37</span>     &lt;TextView android:id="@+id/view_psk"
+<span class="lineno">  38</span>         		<span class="errorspan">android:text="1234123412341234"</span>
+<span class="lineno">  39</span>         		android:layout_width="fill_parent"
+<span class="lineno">  40</span>               android:layout_height="wrap_content"
+</pre>
+</div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Priority: 5 / 10<br/>
+Category: Internationalization</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for hardcoded text attributes which should be converted to resource lookup.</div>
+<div class="explanation">
+Hardcoding text attributes directly in layout files is bad for several reasons:<br/>
+<br/>
+* When creating configuration variations (for example for landscape or portrait)you have to repeat the actual text (and keep it up to date when making changes)<br/>
+<br/>
+* The application cannot be translated to other languages by just adding new translations for existing string resources.<br/>
+<br/>
+In Eclipse there is a quickfix to automatically extract this hardcoded string into a resource lookup.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "HardcodedText" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="MissingIssues"></a>
+<div class="category">Disabled Checks<div class="categorySeparator"></div>
+</div>
+The following issues were not run by lint, either because the check is not enabled by default, or because it was disabled with a command line flag or via one or more lint.xml configuration files in the project directories.
+<br/><br/>
+<a name="BackButton"></a>
+<div class="issue">
+<div class="id">BackButton<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 6 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for Back buttons, which are not common on the Android platform.</div>
+<div class="explanation">
+According to the Android Design Guide,<br/>
+<br/>
+"Other platforms use an explicit back button with label to allow the user to navigate up the application's hierarchy. Instead, Android uses the main action bar's app icon for hierarchical navigation and the navigation bar's back button for temporal navigation."<br/>
+This check is not very sophisticated (it just looks for buttons with the label "Back"), so it is disabled by default to not trigger on common scenarios like pairs of Back/Next buttons to paginate through screens.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/patterns/pure-android.html">http://developer.android.com/design/patterns/pure-android.html</a>
+</div><br/>To suppress this error, use the issue id "BackButton" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="EasterEgg"></a>
+<div class="issue">
+<div class="id">EasterEgg<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 6 / 10<br/>
+Category: Security</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for hidden easter eggs.</div>
+<div class="explanation">
+An "easter egg" is code deliberately hidden in the code, both from potential users and even from other developers. This lint check looks for code which looks like it may be hidden from sight.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "EasterEgg" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="FieldGetter"></a>
+<div class="issue">
+<div class="id">FieldGetter<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 4 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Suggests replacing uses of getters with direct field access within a class.</div>
+<div class="explanation">
+Accessing a field within the class that defines a getter for that field is at least 3 times faster than calling the getter. For simple getters that do nothing other than return the field, you might want to just reference the local field directly instead.<br/>
+<br/>
+<b>NOTE</b>: As of Android 2.3 (Gingerbread), this optimization is performed automatically by Dalvik, so there is no need to change your code; this is only relevant if you are targeting older versions of Android.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/guide/practices/design/performance.html#internal_get_set">http://developer.android.com/guide/practices/design/performance.html#internal_get_set</a>
+</div><br/>To suppress this error, use the issue id "FieldGetter" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="IconExpectedSize"></a>
+<div class="issue">
+<div class="id">IconExpectedSize<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Usability:Icons</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Ensures that launcher icons, notification icons etc have the correct size.</div>
+<div class="explanation">
+There are predefined sizes (for each density) for launcher icons. You should follow these conventions to make sure your icons fit in with the overall look of the platform.
+</div>
+<br/><div class="moreinfo">More info: <a href="http://developer.android.com/design/style/iconography.html">http://developer.android.com/design/style/iconography.html</a>
+</div><br/>To suppress this error, use the issue id "IconExpectedSize" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="RtlCompat"></a>
+<div class="issue">
+<div class="id">RtlCompat<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 6 / 10<br/>
+Category: Bi-directional Text</div>
+Severity: <span class="error">Error</span><div class="summary">
+Explanation: Looks for compatibility issues with RTL support.</div>
+<div class="explanation">
+API 17 adds a <code>textAlignment</code> attribute to specify text alignment. However, if you are supporting older versions than API 17, you must <b>also</b> specify a gravity or layout_gravity attribute, since older platforms will ignore the <code>textAlignment</code> attribute.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "RtlCompat" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="RtlEnabled"></a>
+<div class="issue">
+<div class="id">RtlEnabled<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 3 / 10<br/>
+Category: Bi-directional Text</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for usages of right-to-left text constants without enabling RTL support.</div>
+<div class="explanation">
+To enable right-to-left support, when running on API 17 and higher, you must set the <code>android:supportsRtl</code> attribute in the manifest <code>&lt;application></code> element.<br/>
+If you have started adding RTL attributes, but have not yet finished the migration, you can set the attribute to false to satisfy this lint check.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "RtlEnabled" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="RtlHardcoded"></a>
+<div class="issue">
+<div class="id">RtlHardcoded<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Bi-directional Text</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for hardcoded left/right constants which could be start/end for bidirectional text.</div>
+<div class="explanation">
+Using <code>Gravity#LEFT</code> and <code>Gravity#RIGHT</code> can lead to problems when a layout is rendered in locales where text flows from right to left. Use <code>Gravity#START</code> and <code>Gravity#END</code> instead. Similarly, in XML <code>gravity</code> and <code>layout_gravity</code> attributes, use <code>start</code> rather than <code>left</code>.<br/>
+For XML attributes such as paddingLeft and <code>layout_marginLeft</code>, use <code>paddingStart</code> and <code>layout_marginStart</code>. <b>NOTE</b>: If your <code>minSdkVersion</code> is less than 17, you should add <b>both</b> the older left/right attributes <b>as well as</b> the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.<br/>
+(Note: For <code>Gravity#LEFT</code> and <code>Gravity#START</code>, you can use these constants even when targeting older platforms, because the <code>start</code> bitmask is a superset of the <code>left</code> bitmask. Therefore, you can use <code>gravity="start"</code> rather than <code>gravity="left|start"</code>.)
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "RtlHardcoded" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="SelectableText"></a>
+<div class="issue">
+<div class="id">SelectableText<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 7 / 10<br/>
+Category: Usability</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for TextViews which should probably allow their text to be selected.</div>
+<div class="explanation">
+If a <code>&lt;TextView></code> is used to display data, the user might want to copy that data and paste it elsewhere. To allow this, the <code>&lt;TextView></code> should specify <code>android:textIsSelectable="true"</code>.<br/>
+<br/>
+This lint check looks for TextViews which are likely to be displaying data: views whose text is set dynamically. This value will be ignored on platforms older than API 11, so it is okay to set it regardless of your <code>minSdkVersion</code>.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "SelectableText" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="StopShip"></a>
+<div class="issue">
+<div class="id">StopShip<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 10 / 10<br/>
+Category: Correctness</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for comment markers of the form <code>//STOPSHIP</code> which indicates that code should not be released yet.</div>
+<div class="explanation">
+Using the comment <code>// STOPSHIP</code> can be used to flag code that is incomplete but checked in. This comment marker can be used to indicate that the code should not be shipped until the issue is addressed, and lint will look for these.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "StopShip" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="TypographyQuotes"></a>
+<div class="issue">
+<div class="id">TypographyQuotes<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Note: This issue has an associated quickfix operation in Eclipse/ADT&nbsp;<img alt="Fix" border="0" align="top" src="lint-results_files/lint-run.png" />
+<br>
+Disabled By: Default<br/>
+Priority: 5 / 10<br/>
+Category: Usability:Typography</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for straight quotes which can be replaced by curvy quotes.</div>
+<div class="explanation">
+Straight single quotes and double quotes, when used as a pair, can be replaced by "curvy quotes" (or directional quotes). This can make the text more readable.<br/>
+<br/>
+Note that you should never use grave accents and apostrophes to quote, `like this'.<br/>
+<br/>
+(Also note that you should not use curvy quotes for code fragments.)
+</div>
+<br/><div class="moreinfo">More info: <a href="http://en.wikipedia.org/wiki/Quotation_mark">http://en.wikipedia.org/wiki/Quotation_mark</a>
+</div><br/>To suppress this error, use the issue id "TypographyQuotes" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+<a name="UnusedIds"></a>
+<div class="issue">
+<div class="id">UnusedIds<div class="issueSeparator"></div>
+</div>
+<div class="metadata">Disabled By: Default<br/>
+Priority: 1 / 10<br/>
+Category: Performance</div>
+Severity: <span class="warning">Warning</span><div class="summary">
+Explanation: Looks for unused id's.</div>
+<div class="explanation">
+This resource id definition appears not to be needed since it is not referenced from anywhere. Having id definitions, even if unused, is not necessarily a bad idea since they make working on layouts and menus easier, so there is not a strong reason to delete these.
+</div>
+<br/><div class="moreinfo">More info: </div><br/>To suppress this error, use the issue id "UnusedIds" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+</div>
+
+<a name="SuppressInfo"></a>
+<div class="category">Suppressing Warnings and Errors<div class="categorySeparator"></div>
+</div>
+Lint errors can be suppressed in a variety of ways:<br/>
+<br/>
+1. With a @SuppressLint annotation in the Java code<br/>
+2. With a tools:ignore attribute in the XML file<br/>
+3. With a lint.xml configuration file in the project<br/>
+4. With a lint.xml configuration file passed to lint via the --config flag<br/>
+5. With the --ignore flag passed to lint.<br/>
+<br/>
+To suppress a lint warning with an annotation, add a @SuppressLint("id") annotation on the class, method or variable declaration closest to the warning instance you want to disable. The id can be one or more issue id's, such as "UnusedResources" or {"UnusedResources","UnusedIds"}, or it can be "all" to suppress all lint warnings in the given scope.<br/>
+<br/>
+To suppress a lint warning in an XML file, add a tools:ignore="id" attribute on the element containing the error, or one of its surrounding elements. You also need to define the namespace for the tools prefix on the root element in your document, next to the xmlns:android declaration:<br/>
+* xmlns:tools="http://schemas.android.com/tools"<br/>
+<br/>
+To suppress lint warnings with a configuration XML file, create a file named lint.xml and place it at the root directory of the project in which it applies. (If you use the Eclipse plugin's Lint view, you can suppress errors there via the toolbar and Eclipse will create the lint.xml file for you.).<br/>
+<br/>
+The format of the lint.xml file is something like the following:<br/>
+<br/>
+&lt;?xml version="1.0" encoding="UTF-8"?><br/>
+&lt;lint><br/>
+    &lt;!-- Disable this given check in this project --><br/>
+    &lt;issue id="IconMissingDensityFolder" severity="ignore" /><br/>
+<br/>
+    &lt;!-- Ignore the ObsoleteLayoutParam issue in the given files --><br/>
+    &lt;issue id="ObsoleteLayoutParam"><br/>
+        &lt;ignore path="res/layout/activation.xml" /><br/>
+        &lt;ignore path="res/layout-xlarge/activation.xml" /><br/>
+    &lt;/issue><br/>
+<br/>
+    &lt;!-- Ignore the UselessLeaf issue in the given file --><br/>
+    &lt;issue id="UselessLeaf"><br/>
+        &lt;ignore path="res/layout/main.xml" /><br/>
+    &lt;/issue><br/>
+<br/>
+    &lt;!-- Change the severity of hardcoded strings to "error" --><br/>
+    &lt;issue id="HardcodedText" severity="error" /><br/>
+&lt;/lint><br/>
+<br/>
+To suppress lint checks from the command line, pass the --ignore flag with a comma separated list of ids to be suppressed, such as:<br/>
+"lint --ignore UnusedResources,UselessLeaf /my/project/path"<br/>
+
+
+</body>
+</html>

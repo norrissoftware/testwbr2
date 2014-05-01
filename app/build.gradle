@@ -1,0 +1,59 @@
+apply plugin: 'android'
+
+android {
+    signingConfigs {
+        debug {
+
+        }
+
+        /* test 2 */
+
+        myConfig {
+            storeFile file("./my-release-key.keystore")
+            storePassword "bibou34"
+            keyAlias "bibou"
+            keyPassword "bibou34"
+        }
+    }
+
+    compileSdkVersion 15
+    buildToolsVersion "19.0.1"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 15
+        versionCode 1
+        versionName "2.0.6"
+    }
+
+    buildTypes {
+        debug {
+            /*  runProguard false
+              proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+              debuggable true
+              jniDebugBuild true
+              zipAlign true
+              signingConfig signingConfigs.myConfig*/
+        }
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            debuggable true
+            jniDebugBuild true
+            zipAlign true
+            signingConfig signingConfigs.myConfig
+        }
+    }
+
+
+    lintOptions {
+        abortOnError false
+    }
+
+
+
+}
+
+dependencies {
+    compile "com.android.support:support-v4:18.0.+"
+}
