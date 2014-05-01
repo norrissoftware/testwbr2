@@ -115,6 +115,7 @@ public class WIFIConfigurationManager {
             return file.getAbsolutePath();
         }
         catch (Exception e) {
+            e.printStackTrace();
             Log.e("WBR","failed to get superuser perm :: " +e.getMessage());
             return null;
         }

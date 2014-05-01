@@ -19,7 +19,6 @@ public class NetworkListAdapter extends SimpleAdapter {
 
 	public NetworkListAdapter (Context context, List<Map<String, String>> items, int resource, String[] from, int[] to) {
 		    super(context, items, resource, from, to);
-
 	}
 
 	@Override
@@ -31,6 +30,7 @@ public class NetworkListAdapter extends SimpleAdapter {
 	 @Override
     public View getView(int position, View convertView, ViewGroup parent) {
       View view = super.getView(position, convertView, parent);
+     //View.inflate(, R.layout.custom_display_view, null);
       int colorPos = position % colors.length;
 
 	  Resources res = parent.getResources();

@@ -3,6 +3,7 @@ package com.beboo.wifibackupandrestore;
 
 
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.ActionMode;
@@ -37,7 +38,7 @@ import com.beboo.wifibackupandrestore.backupmanagement.NetworkDataChangedListene
 import com.beboo.wifibackupandrestore.backupmanagement.WIFIConfigurationManager;
 
 
-public abstract class NetworkListFragment extends ListFragment  implements NetworkDataChangedListener, OnItemClickListener, ActionMode.Callback {
+    public abstract class NetworkListFragment extends ListFragment  implements NetworkDataChangedListener, OnItemClickListener, ActionMode.Callback {
 
 
 private static final String KEYMGMT_ITEM = "keymgmt";
@@ -75,7 +76,7 @@ public NetworkListFragment() {
 		}
 
 		// fill in the grid_item layout
-		SimpleAdapter adapter = new NetworkListAdapter(getActivity(), fillMaps, R.layout.onelinelist2, from, to);
+		SimpleAdapter adapter = new NetworkListAdapter(getActivity(), fillMaps, R.layout.onelinelist2b, from, to);
 		lv.setAdapter(adapter);
 
 
@@ -194,6 +195,8 @@ public NetworkListFragment() {
         }
     }
 
+
+
     protected void unSelectRow(View view, int position) {
         Resources res = getActivity().getResources();
         if (position % 2 == 0) {
@@ -252,21 +255,6 @@ public NetworkListFragment() {
             this.getActivity().startActionMode(this);
         }
         Log.d("WBR","########################################");
-
-/*
-        if (selectedNetwork == null) {
-            selectRow(net,view,position);
-            this.getActivity().startActionMode(this);
-        }
-        else {
-            unSelectRow(view,position);
-
-            if (actionMode != null) {
-                actionMode.finish();
-            }
-        }
-*/
-
 
 
     }

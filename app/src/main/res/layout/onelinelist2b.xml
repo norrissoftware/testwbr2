@@ -6,7 +6,11 @@
     android:orientation="horizontal"
     android:paddingLeft="3.0dip"
     android:paddingRight="3.0dip" >
-
+    <ImageView android:src="@drawable/wifi"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal|center_vertical">
+    </ImageView>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
