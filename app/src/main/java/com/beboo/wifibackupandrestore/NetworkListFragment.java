@@ -3,36 +3,25 @@ package com.beboo.wifibackupandrestore;
 
 
 import android.content.res.Resources;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.ListActivity;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
+
 import com.beboo.wifibackupandrestore.backupmanagement.Network;
 import com.beboo.wifibackupandrestore.backupmanagement.NetworkDataChangedListener;
 import com.beboo.wifibackupandrestore.backupmanagement.WIFIConfigurationManager;
@@ -76,7 +65,7 @@ public NetworkListFragment() {
 		}
 
 		// fill in the grid_item layout
-		SimpleAdapter adapter = new NetworkListAdapter(getActivity(), fillMaps, R.layout.onelinelist2b, from, to);
+		SimpleAdapter adapter = new NetworkListAdapter(getActivity(), fillMaps, R.layout.left_row, from, to);
 		lv.setAdapter(adapter);
 
 
@@ -108,7 +97,7 @@ public NetworkListFragment() {
 		}
 
 		// fill in the grid_item layout
-		SimpleAdapter adapter = new NetworkListAdapter(getActivity(), fillMaps, R.layout.onelinelist2, from, to);
+		SimpleAdapter adapter = new NetworkListAdapter(getActivity(), fillMaps, R.layout.right_row, from, to);
 		lv.setAdapter(adapter);
 
 
@@ -186,25 +175,15 @@ public NetworkListFragment() {
 
     protected void selectRow(Network net, View view, int position) {
         Resources res = getActivity().getResources();
-        if (position % 2 == 0) {
-            //@android:color/holo_blue_light;
-            view.setBackgroundColor(res.getColor(R.color.selected_even_line));
-        }
-        else {
-            view.setBackgroundColor(res.getColor(R.color.selected_odd_line));
-        }
+        view.setBackgroundDrawable(res.getDrawable(R.drawable.selected_row_bg));
+
     }
 
 
 
     protected void unSelectRow(View view, int position) {
         Resources res = getActivity().getResources();
-        if (position % 2 == 0) {
-            view.setBackgroundColor(res.getColor(R.color.even_line));
-        }
-        else {
-            view.setBackgroundColor(res.getColor(R.color.odd_line));
-        }
+        view.setBackgroundDrawable(res.getDrawable(R.drawable.row_bg));
     }
 
 

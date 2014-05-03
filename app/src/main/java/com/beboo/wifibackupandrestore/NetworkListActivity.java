@@ -6,20 +6,13 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.app.ListActivity;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
 
 import com.beboo.wifibackupandrestore.backupmanagement.Network;
 import com.beboo.wifibackupandrestore.backupmanagement.NetworkDataChangedListener;
@@ -28,10 +21,10 @@ import com.beboo.wifibackupandrestore.backupmanagement.NetworkDataChangedListene
 public abstract class NetworkListActivity extends ListActivity implements NetworkDataChangedListener, OnItemClickListener { 
 
 
-	private static final String KEYMGMT_ITEM = "keymgmt";
-	private static final String SSID_ITEM = "ssid";
-	private static final String ALIAS_ITEM = "alias";
-	private static final String STATE_ITEM = "state";
+	public static final String KEYMGMT_ITEM = "keymgmt";
+    public static final String SSID_ITEM = "ssid";
+    public static final String ALIAS_ITEM = "alias";
+    public static final String STATE_ITEM = "state";
 
 	/** Called when the activity is first created. */
 	@Override
@@ -73,7 +66,7 @@ public abstract class NetworkListActivity extends ListActivity implements Networ
 		}
 
 		// fill in the grid_item layout
-		SimpleAdapter adapter = new NetworkListAdapter(this, fillMaps, R.layout.onelinelist2, from, to);
+		SimpleAdapter adapter = new NetworkListAdapter(this, fillMaps, R.layout.right_row, from, to);
 		lv.setAdapter(adapter);
 
 
@@ -100,7 +93,7 @@ public abstract class NetworkListActivity extends ListActivity implements Networ
 		}
 
 		// fill in the grid_item layout
-		SimpleAdapter adapter = new NetworkListAdapter(this, fillMaps, R.layout.onelinelist2, from, to);
+		SimpleAdapter adapter = new NetworkListAdapter(this, fillMaps, R.layout.right_row, from, to);
 		lv.setAdapter(adapter);
 
 
