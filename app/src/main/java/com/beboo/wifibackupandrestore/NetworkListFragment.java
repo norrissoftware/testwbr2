@@ -9,6 +9,7 @@ import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -175,15 +176,18 @@ public NetworkListFragment() {
 
     protected void selectRow(Network net, View view, int position) {
         Resources res = getActivity().getResources();
-        view.setBackgroundDrawable(res.getDrawable(R.drawable.selected_row_bg));
-
+        //android:id="@+id/selectionImage" view.findViewById(
+        ImageView image = (ImageView)view.findViewById(R.id.selectionImage);
+        image.setImageDrawable(res.getDrawable(R.drawable.selected_wifi));
     }
 
 
 
     protected void unSelectRow(View view, int position) {
         Resources res = getActivity().getResources();
-        view.setBackgroundDrawable(res.getDrawable(R.drawable.row_bg));
+        //android:id="@+id/selectionImage" view.findViewById(
+        ImageView image = (ImageView)view.findViewById(R.id.selectionImage);
+        image.setImageDrawable(res.getDrawable(R.drawable.wifi));
     }
 
 
