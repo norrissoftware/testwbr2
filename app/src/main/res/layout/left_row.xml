@@ -91,6 +91,6 @@
 </LinearLayout>
     <LinearLayout android:layout_width="fill_parent"
         android:layout_height="1px"
-        android:background="@android:color/holo_blue_bright"></LinearLayout>
+        android:background="#ddd"></LinearLayout>
     </LinearLayout>
     </LinearLayout>
