@@ -4,6 +4,11 @@
     <dataSet config="main" >
         <source path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res" >
             <file
+                name="divider"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-hdpi\divider.xml"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="icon"
                 path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-hdpi\icon.png"
                 qualifiers="hdpi"
@@ -24,8 +29,43 @@
                 qualifiers="hdpi"
                 type="drawable" />
             <file
+                name="selected_row_bg"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-hdpi\selected_row_bg.xml"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="selected_wifi"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-hdpi\selected_wifi.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
+                name="wifi"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-hdpi\wifi.png"
+                qualifiers="hdpi"
+                type="drawable" />
+            <file
                 name="icon"
                 path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-ldpi\icon.png"
+                qualifiers="ldpi"
+                type="drawable" />
+            <file
+                name="row_bg"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-ldpi\row_bg.xml"
+                qualifiers="ldpi"
+                type="drawable" />
+            <file
+                name="selected_row_bg"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-ldpi\selected_row_bg.xml"
+                qualifiers="ldpi"
+                type="drawable" />
+            <file
+                name="selected_wifi"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-ldpi\selected_wifi.png"
+                qualifiers="ldpi"
+                type="drawable" />
+            <file
+                name="wifi"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-ldpi\wifi.png"
                 qualifiers="ldpi"
                 type="drawable" />
             <file
@@ -41,6 +81,26 @@
             <file
                 name="ic_menu_refresh"
                 path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-mdpi\ic_menu_refresh.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="row_bg"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-mdpi\row_bg.xml"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="selected_row_bg"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-mdpi\selected_row_bg.xml"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="selected_wifi"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-mdpi\selected_wifi.png"
+                qualifiers="mdpi"
+                type="drawable" />
+            <file
+                name="wifi"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-mdpi\wifi.png"
                 qualifiers="mdpi"
                 type="drawable" />
             <file
@@ -64,13 +124,58 @@
                 qualifiers="xhdpi"
                 type="drawable" />
             <file
+                name="row_bg"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-xhdpi\row_bg.xml"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="selected_row_bg"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-xhdpi\selected_row_bg.xml"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="selected_wifi"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-xhdpi\selected_wifi.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
+                name="wifi"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-xhdpi\wifi.png"
+                qualifiers="xhdpi"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-xxhdpi\ic_launcher.png"
                 qualifiers="xxhdpi"
                 type="drawable" />
             <file
+                name="row_bg"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-xxhdpi\row_bg.xml"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="selected_row_bg"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-xxhdpi\selected_row_bg.xml"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="selected_wifi"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-xxhdpi\selected_wifi.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
+                name="wifi"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\drawable-xxhdpi\wifi.png"
+                qualifiers="xxhdpi"
+                type="drawable" />
+            <file
                 name="activity_main"
                 path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\activity_main.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="left_row"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\left_row.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -94,8 +199,8 @@
                 qualifiers=""
                 type="layout" />
             <file
-                name="onelinelist2"
-                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\onelinelist2.xml"
+                name="right_row"
+                path="C:\Users\olivier\androidStudioProjects2\WBR2\app\src\main\res\layout\right_row.xml"
                 qualifiers=""
                 type="layout" />
             <file
