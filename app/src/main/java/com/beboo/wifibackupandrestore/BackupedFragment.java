@@ -60,7 +60,12 @@ public class BackupedFragment extends NetworkListFragment implements ActionMode.
 
 
 	public void restoreNetwork(Network net) {
-		confManager.restoreNetwork(net);
+		boolean restored = confManager.restoreNetwork(net);
+        if (!restored) {
+            String msg = getString(R.string.unable_to_restore) + " " +net.getSsid()+ " :";
+            Context context = getActivity().getApplicationContext();
+            Toast.makeText(context,msg,Toast.LENGTH_LONG);
+        }
 	}
 
 

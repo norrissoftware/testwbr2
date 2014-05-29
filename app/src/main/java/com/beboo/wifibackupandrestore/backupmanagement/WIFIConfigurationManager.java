@@ -323,7 +323,7 @@ public class WIFIConfigurationManager {
         }
     }
 
-    public void restoreNetwork(Network network)
+    public boolean restoreNetwork(Network network)
     {
 
         WifiConfiguration wc = new WifiConfiguration();
@@ -346,21 +346,27 @@ public class WIFIConfigurationManager {
         boolean res1 = wifiManager.setWifiEnabled(true);
         int res = wifiManager.addNetwork(wc);
         Log.d("WifiPreference", "add Network returned " + res );
-        boolean es = wifiManager.saveConfiguration();
-        Log.d("WifiPreference", "saveConfiguration returned " + es );
-        boolean b = wifiManager.enableNetwork(res, true);
-        Log.d("WifiPreference", "enableNetwork returned " + b );
+        boolean result = res != -1;
+        if (result) {
+            boolean es = wifiManager.saveConfiguration();
+            Log.d("WifiPreference", "saveConfiguration returned " + es );
+            result = result && es;
+            if (result) {
+                boolean b = wifiManager.enableNetwork(res, true);
+                Log.d("WifiPreference", "enableNetwork returned " + b );
+                result = result && b;
+                if (result) {
+                        Log.d("WBR","restore of ["+network.getAlias()+"] ended");
+                        addConfiguredNetwork(network);
+                        Network backupedNetwork = getBackupedNetworkBySsid(network.getSsid());
+                        backupedNetwork.setState(context.getString(R.string.configured));
+                        addBackupedNetwork(backupedNetwork);
 
-        Log.d("WBR","restore of ["+network.getAlias()+"] ended");
-        addConfiguredNetwork(network);
-        Network backupedNetwork = getBackupedNetworkBySsid(network.getSsid());
-        backupedNetwork.setState(context.getString(R.string.configured));
-        addBackupedNetwork(backupedNetwork);
-
-
-
-        notifyBackupedNetworkListener();
-
+                        notifyBackupedNetworkListener();
+                }
+            }
+        }
+        return result;
     }
 
     public void reGenerateBackupFile() throws IOException {
