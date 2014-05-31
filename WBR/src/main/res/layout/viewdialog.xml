@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:padding="24dip"
+    android:background="@drawable/border">
 
     <TextView android:id="@+id/view_alias"
-        android:text=""
+        android:text="alias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -13,7 +15,7 @@
         />
 
     <TextView android:id="@+id/view_ssid"
-        android:text=""
+        android:text="ssidssidssid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#555"
@@ -23,7 +25,7 @@
         />
 
     <TextView android:id="@+id/view_keymgmt"
-        android:text=""
+        android:text="NONE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#555"
@@ -33,7 +35,7 @@
         />
 
     <TextView android:id="@+id/view_psk"
-        android:text=""
+        android:text="ssidssidssidssidssidssid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#555"
