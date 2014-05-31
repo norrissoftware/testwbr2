@@ -2,6 +2,7 @@ package com.beboo.wifibackupandrestore;
 
 
 
+import android.app.Dialog;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -9,6 +10,8 @@ import android.view.ActionMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 
@@ -22,6 +25,7 @@ import android.util.Log;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 
 import com.beboo.wifibackupandrestore.backupmanagement.Network;
 import com.beboo.wifibackupandrestore.backupmanagement.NetworkDataChangedListener;
@@ -138,8 +142,49 @@ public NetworkListFragment() {
 
 	}
 	
-	public void viewNetwork(Network net) {		
-		
+	public void viewNetwork(Network net) {
+        android.util.Log.d("WBR","view net "+net.getAlias()+" / "+net.getSsid());
+
+        final Dialog dialog = new Dialog(getActivity());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.viewdialog);
+        android.util.Log.d("WBR","view net dialog created");
+
+        if (net.getAlias() != null) {
+            TextView alias = (TextView)dialog.findViewById(R.id.view_alias);
+            alias.setText(net.getAlias());
+        }
+        if (net.getSsid() != null) {
+            TextView ssid = (TextView)dialog.findViewById(R.id.view_ssid);
+            ssid.setText(net.getSsid());
+        }
+        if (net.getKeyManagment() != null) {
+            TextView keyMgmt = (TextView)dialog.findViewById(R.id.view_keymgmt);
+            keyMgmt.setText(net.getKeyManagment());
+        }
+        if (net.getShatedKey() != null) {
+            TextView sharedkey = (TextView)dialog.findViewById(R.id.view_psk);
+            sharedkey.setText(net.getShatedKey());
+        }
+
+        android.util.Log.d("WBR","view net dialog data set");
+
+        Button dialogButton = (Button) dialog.findViewById(R.id.view_ok);
+        // if button is clicked, close the custom dialog
+        dialogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        android.util.Log.d("WBR","view net dialog button set");
+
+        dialog.show();
+
+        android.util.Log.d("WBR","view net dialog shown");
+
+/*
 		AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
 		alert.setTitle("d\u00e9tails du r\u00e9seau");
 		alert.setMessage("Alias : "+net.getAlias()+" \nSSID : "+net.getSsid()+" \nkeymgmt : "+net.getKeyManagment()+" \nPSK : "+net.getShatedKey());
@@ -152,7 +197,7 @@ public NetworkListFragment() {
                                     }
                                 });
 		alert.show();
-		
+		*/
 	}
 
 

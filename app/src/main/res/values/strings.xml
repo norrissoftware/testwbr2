@@ -21,5 +21,5 @@
 	<string name="delete">delete</string>
     <string name="msg_rename_net">Rename network </string>
     <string name="msg_set_alias_net">set an alias to network </string>
-	
+    <string name="unable_to_restore">Unable to restore network </string>
 </resources>
