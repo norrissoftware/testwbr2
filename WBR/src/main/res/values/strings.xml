@@ -22,4 +22,9 @@
     <string name="msg_rename_net">Rename network </string>
     <string name="msg_set_alias_net">set an alias to network </string>
     <string name="unable_to_restore">Unable to restore network </string>
+    <string name="view_lbl_alias">Alias</string>
+    <string name="view_lbl_ssid">SSID</string>
+    <string name="view_lbl_keymgmt">keymgmt</string>
+    <string name="view_lbl_key">clé</string>
+    <string name="view_restoring">restauration en cours....</string>
 </resources>

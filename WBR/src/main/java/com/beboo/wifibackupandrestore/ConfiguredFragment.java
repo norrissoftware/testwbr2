@@ -56,7 +56,9 @@ public class ConfiguredFragment extends NetworkListFragment implements ActionMod
 	public ConfiguredFragment() {
 		Log.d("WBR","################ new ConfiguredFragment");
 	}
-	
+
+    public void restoreNetwork(Network net) {
+    }
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {

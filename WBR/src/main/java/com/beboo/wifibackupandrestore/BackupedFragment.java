@@ -29,6 +29,8 @@ public class BackupedFragment extends NetworkListFragment implements ActionMode.
 	
 	public BackupedFragment() {
 		Log.d("WBR","################ new BackupedFragment");
+        needRestore = true;
+
 	}
 	
 
@@ -60,11 +62,16 @@ public class BackupedFragment extends NetworkListFragment implements ActionMode.
 
 
 	public void restoreNetwork(Network net) {
-		boolean restored = confManager.restoreNetwork(net);
+		Log.d("WBR","restoring net"+net.getAlias()+" - "+net.getSsid());
+        boolean restored = confManager.restoreNetwork(net);
         if (!restored) {
+            Log.d("WBR","net "+net.getAlias()+"not existant");
             String msg = getString(R.string.unable_to_restore) + " " +net.getSsid()+ " :";
             Context context = getActivity().getApplicationContext();
             Toast.makeText(context,msg,Toast.LENGTH_LONG);
+        }
+        else {
+            Log.d("WBR","net "+net.getAlias()+" already exists");
         }
 	}
 

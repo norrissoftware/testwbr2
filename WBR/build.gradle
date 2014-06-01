@@ -23,7 +23,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 15
         versionCode 1
-        versionName "2.1.1"
+        versionName "2.1.1.2"
     }
 
     buildTypes {
@@ -42,6 +42,7 @@ android {
             jniDebugBuild true
             zipAlign true
             signingConfig signingConfigs.myConfig
+
         }
     }
 

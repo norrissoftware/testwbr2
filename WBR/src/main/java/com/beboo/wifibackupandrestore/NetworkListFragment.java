@@ -26,6 +26,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.beboo.wifibackupandrestore.backupmanagement.Network;
 import com.beboo.wifibackupandrestore.backupmanagement.NetworkDataChangedListener;
@@ -39,6 +40,8 @@ private static final String KEYMGMT_ITEM = "keymgmt";
 private static final String SSID_ITEM = "ssid";
 private static final String ALIAS_ITEM = "alias";
 private static final String STATE_ITEM = "state";
+
+        protected boolean needRestore = false;
 
 public NetworkListFragment() {
 
@@ -111,6 +114,9 @@ public NetworkListFragment() {
 		return adapter;
 	}
 
+        public abstract void restoreNetwork(Network net);
+
+
 	Map<String, String> createItem(Network network) {
 		Map<String,String> item = new HashMap<String, String>();
 		String alias = network.getAlias();
@@ -142,7 +148,7 @@ public NetworkListFragment() {
 
 	}
 	
-	public void viewNetwork(Network net) {
+	public void viewNetwork(final Network net) {
         android.util.Log.d("WBR","view net "+net.getAlias()+" / "+net.getSsid());
 
         final Dialog dialog = new Dialog(getActivity());
@@ -169,14 +175,33 @@ public NetworkListFragment() {
 
         android.util.Log.d("WBR","view net dialog data set");
 
-        Button dialogButton = (Button) dialog.findViewById(R.id.view_ok);
+        Button okButton = (Button) dialog.findViewById(R.id.view_ok);
         // if button is clicked, close the custom dialog
-        dialogButton.setOnClickListener(new View.OnClickListener() {
+        okButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
             }
         });
+        Button restore = (Button) dialog.findViewById(R.id.view_restore);
+        if (needRestore) {
+
+            // if button is clicked, close the custom dialog
+            restore.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    NetworkListFragment.this.restoreNetwork(net);
+                    Resources res = NetworkListFragment.this.getActivity().getResources();
+                    String msg = res.getString(R.string.view_restoring);
+                    Toast.makeText(NetworkListFragment.this.getActivity(),msg,Toast.LENGTH_LONG).show();
+                    dialog.dismiss();
+                }
+            });
+        }
+        else {
+            restore.setVisibility(View.GONE);
+        }
 
         android.util.Log.d("WBR","view net dialog button set");
 

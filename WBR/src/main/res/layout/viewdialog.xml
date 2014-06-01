@@ -5,43 +5,91 @@
     android:padding="24dip"
     android:background="@drawable/border">
 
-    <TextView android:id="@+id/view_alias"
-        android:text=""
+    <TextView
+        android:id="@+id/view_lbl_alias"
+        android:text="Alias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:paddingBottom="12dip"
+
         android:gravity="center_horizontal"
         />
 
-    <TextView android:id="@+id/view_ssid"
-        android:text=""
+    <TextView android:id="@+id/view_alias"
+        android:layout_marginLeft="15dip"
+        android:text="maison"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#555"
+        android:textStyle=""
         android:paddingBottom="12dip"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/view_lbl_alias"
+        />
+
+    <TextView
+        android:id="@+id/view_lbl_ssid"
+        android:text="SSID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+
         android:gravity="center_horizontal"
         android:layout_below="@id/view_alias"
         />
 
-    <TextView android:id="@+id/view_keymgmt"
-        android:text=""
+    <TextView android:id="@+id/view_ssid"
+        android:layout_marginLeft="15dip"
+        android:text="Livebox2f62"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#555"
         android:paddingBottom="12dip"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/view_lbl_ssid"
+        />
+
+    <TextView
+        android:id="@+id/view_lbl_keymgmt"
+        android:text="key management"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+
         android:gravity="center_horizontal"
         android:layout_below="@id/view_ssid"
         />
 
-    <TextView android:id="@+id/view_psk"
-        android:text=""
+    <TextView android:id="@+id/view_keymgmt"
+        android:layout_marginLeft="15dip"
+        android:text="WPA-PSK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#555"
         android:paddingBottom="12dip"
         android:gravity="center_horizontal"
+        android:layout_below="@id/view_lbl_keymgmt"
+        />
+
+    <TextView
+        android:id="@+id/view_lbl_psk"
+        android:text="key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+
+        android:gravity="center_horizontal"
         android:layout_below="@id/view_keymgmt"
+        />
+
+    <TextView android:id="@+id/view_psk"
+        android:layout_marginLeft="15dip"
+        android:text="497058625412AAA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#555"
+        android:paddingBottom="12dip"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/view_lbl_psk"
         />
 
 
@@ -52,64 +100,19 @@
         android:text="@string/ok"
         android:gravity="center_horizontal"
         android:layout_below="@id/view_psk"
-        android:layout_centerHorizontal="true"
-        />
 
-</RelativeLayout>
-    <!--
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:id="@+id/layout_root"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="wrap_content"
-              android:padding="10dp"
-              android:gravity="center_horizontal"
-              >
-    
-    
-    <TextView android:id="@+id/view_alias"
-        android:text="maison"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:textStyle="bold"
-              android:paddingBottom="10dip"
-        android:gravity="center_horizontal"
-              />
-    
-    <TextView android:id="@+id/view_ssid"
-        android:text="Livebox-2F62"
-        		android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:textColor="#BBB"
-              android:paddingBottom="10dip"
-        android:gravity="center_horizontal"
-              />
-    
-    <TextView android:id="@+id/view_keymgmt"
-        		android:text="WPA-PSK"
-        		android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:textColor="#BBB"
-              android:paddingBottom="10dip"
-        android:gravity="center_horizontal"
-              />
-    
-    <TextView android:id="@+id/view_psk"
-        		android:text="1234123412341234666"
-        		android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:textColor="#BBB"
-              android:paddingBottom="10dip"
-        android:gravity="center_horizontal"
-              />
-    
+        />
 
     <Button
-        android:id="@+id/view_ok"
-        android:layout_width="75dip"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ok"
-        android:gravity="center_horizontal"
-        />
+        android:text=""
+        android:id="@+id/view_restore"
+        android:background="@drawable/ic_menu_copy_holo_dark"
 
-</LinearLayout>-->
+        android:layout_below="@+id/view_psk"
+        android:layout_marginLeft="50dip"
+        android:layout_toRightOf="@+id/view_ok" />
+
+
+</RelativeLayout>
