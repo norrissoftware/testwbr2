@@ -6,7 +6,7 @@
     android:background="@drawable/border">
 
     <TextView android:id="@+id/view_alias"
-        android:text="alias"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -15,7 +15,7 @@
         />
 
     <TextView android:id="@+id/view_ssid"
-        android:text="ssidssidssid"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#555"
@@ -25,7 +25,7 @@
         />
 
     <TextView android:id="@+id/view_keymgmt"
-        android:text="NONE"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#555"
@@ -35,7 +35,7 @@
         />
 
     <TextView android:id="@+id/view_psk"
-        android:text="ssidssidssidssidssidssid"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#555"
