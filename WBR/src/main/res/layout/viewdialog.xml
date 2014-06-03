@@ -92,7 +92,7 @@
         android:layout_below="@id/view_lbl_psk"
         />
 
-
+<!--
     <Button
         android:id="@+id/view_ok"
         android:layout_width="75dip"
@@ -112,7 +112,44 @@
 
         android:layout_below="@+id/view_psk"
         android:layout_marginLeft="50dip"
-        android:layout_toRightOf="@+id/view_ok" />
+        android:layout_toRightOf="@+id/view_ok" /> -->
+
+
+    <Button
+        android:layout_below="@id/view_psk"
+        android:id="@+id/view_restore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+
+        android:background="?android:attr/selectableItemBackground"
+        android:text="restauration"
+        android:layout_alignParentBottom="true"/>
+    <View
+        android:id="@+id/view_button_bar"
+        android:layout_width="1dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="4dip"
+        android:layout_marginTop="4dip"
+        android:layout_toRightOf="@id/view_restore"
+
+        android:background="?android:attr/dividerVertical"
+        android:layout_centerHorizontal="true"/>
+    <Button
+        android:id="@+id/view_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@android:string/ok"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@id/view_button_bar"
+        />
+
 
 
 </RelativeLayout>
