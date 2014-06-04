@@ -120,7 +120,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:divider="?android:attr/dividerHorizontal"
-          android:orientation="vertical"
+          android:orientation="horizontal"
           android:layout_below="@id/view_psk"
           android:showDividers="middle">
 
