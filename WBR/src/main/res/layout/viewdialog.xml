@@ -121,6 +121,7 @@
           android:layout_height="wrap_content"
           android:divider="?android:attr/dividerHorizontal"
           android:orientation="vertical"
+          android:layout_below="@id/view_psk"
           android:showDividers="middle">
 
     <Button
@@ -143,8 +144,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="4dip"
         android:layout_marginTop="4dip"
-        android:layout_toRightOf="@id/view_restore"
-
         android:background="?android:attr/dividerVertical"
         android:layout_centerHorizontal="true"/>
     <Button
@@ -158,7 +157,6 @@
         android:text="@android:string/ok"
         
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@id/view_button_bar"
         />
 
 </LinearLayout>
