@@ -117,7 +117,7 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-          android:layout_width="match_parent"
+          android:layout_width="fill_parent"
           android:layout_height="wrap_content"
           android:divider="?android:attr/dividerHorizontal"
           android:orientation="horizontal"
@@ -130,17 +130,16 @@
         android:layout_weight="0.5"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+
         android:background="?android:attr/selectableItemBackground"
-        android:text="@string/lbl_restore"
+        android:text="Restauration"
         android:layout_alignParentTop="true"/>
         android:layout_alignParentBottom="true"/>
     <View
         android:id="@+id/view_button_bar"
         android:layout_width="1dip"
-        android:layout_height="wrap_content"
+        android:layout_height="fill_parent"
         android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginBottom="4dip"
         android:layout_marginTop="4dip"
         android:background="?android:attr/dividerVertical"
@@ -155,7 +154,7 @@
         android:background="?android:attr/selectableItemBackground"
         android:text="@android:string/ok"
         
-        android:layout_alignParentBottom="true"
+
         />
 
 </LinearLayout>
