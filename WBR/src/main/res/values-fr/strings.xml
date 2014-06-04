@@ -26,5 +26,6 @@
     <string name="view_lbl_ssid">SSID</string>
     <string name="view_lbl_keymgmt">keymgmt</string>
     <string name="view_lbl_key">clé</string>
+    <string name="lbl_restore">Restauration</string>
     <string name="view_restoring">restauration en cours....</string>
 </resources>
