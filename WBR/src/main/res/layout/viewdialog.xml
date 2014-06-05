@@ -2,10 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:padding="24dip"
+
     android:background="@drawable/border">
 
     <TextView
+        android:paddingLeft="24dip"
+        android:paddingTop="24dip"
+
+
         android:id="@+id/view_lbl_alias"
         android:text="Alias"
         android:layout_width="wrap_content"
@@ -16,7 +20,7 @@
         />
 
     <TextView android:id="@+id/view_alias"
-        android:layout_marginLeft="15dip"
+        android:layout_marginLeft="39dip"
         android:text="maison"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,6 +31,7 @@
         />
 
     <TextView
+        android:paddingLeft="24dip"
         android:id="@+id/view_lbl_ssid"
         android:text="SSID"
         android:layout_width="wrap_content"
@@ -38,7 +43,7 @@
         />
 
     <TextView android:id="@+id/view_ssid"
-        android:layout_marginLeft="15dip"
+        android:layout_marginLeft="39dip"
         android:text="Livebox2f62"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,6 +54,7 @@
         />
 
     <TextView
+        android:paddingLeft="24dip"
         android:id="@+id/view_lbl_keymgmt"
         android:text="key management"
         android:layout_width="wrap_content"
@@ -60,7 +66,7 @@
         />
 
     <TextView android:id="@+id/view_keymgmt"
-        android:layout_marginLeft="15dip"
+        android:layout_marginLeft="39dip"
         android:text="WPA-PSK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,6 +77,7 @@
         />
 
     <TextView
+        android:paddingLeft="24dip"
         android:id="@+id/view_lbl_psk"
         android:text="key"
         android:layout_width="wrap_content"
@@ -82,7 +89,7 @@
         />
 
     <TextView android:id="@+id/view_psk"
-        android:layout_marginLeft="15dip"
+        android:layout_marginLeft="39dip"
         android:text="497058625412AAA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
