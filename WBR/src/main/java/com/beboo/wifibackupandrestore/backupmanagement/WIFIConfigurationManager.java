@@ -25,7 +25,7 @@ public class WIFIConfigurationManager {
     public static final String WPA_SUPPLICANT_CONF_FILENAME = "wpa_supplicant.conf";
     public static final String BCM_SUPP_CONF_FILENAME = "bcm_supp.conf";
     public static final String BACKUP_FILE_NAME = "wifi.conf";
-    public static final String BACKUP_PATH = "/mnt/sdcard/WIFI_Backup_Restore";
+    public static final String BACKUP_PATH = new File(getExternalStorageDirectory (), "WIFI_Backup_Restore").getAbsolutePath;
     public static final String BACKUP_HISTORY_PATH = BACKUP_PATH+"/history";
     public static final String WIFI_CONFIG_PATH = "/data/misc/wifi";
 
