@@ -18,14 +18,16 @@ import com.beboo.wifibackupandrestore.WIFIBackupAndRestoreActivity;
 import android.content.Context;
 import android.net.wifi.WifiConfiguration;
 import android.net.wifi.WifiManager;
+import android.os.Environment;
 import android.util.Log;
+import android.os.* ;
 
 public class WIFIConfigurationManager {
 
     public static final String WPA_SUPPLICANT_CONF_FILENAME = "wpa_supplicant.conf";
     public static final String BCM_SUPP_CONF_FILENAME = "bcm_supp.conf";
     public static final String BACKUP_FILE_NAME = "wifi.conf";
-    public static final String BACKUP_PATH = new File(getExternalStorageDirectory (), "WIFI_Backup_Restore").getAbsolutePath;
+    public static final String BACKUP_PATH = new File(Environment.getExternalStorageDirectory(), "WIFI_Backup_Restore").getAbsolutePath();
     public static final String BACKUP_HISTORY_PATH = BACKUP_PATH+"/history";
     public static final String WIFI_CONFIG_PATH = "/data/misc/wifi";
 
@@ -74,7 +76,7 @@ public class WIFIConfigurationManager {
 
 
             Log.i("WBR","trying to get superuser perm");
-            Process suProcess = Runtime.getRuntime().exec("su");
+            java.lang.Process suProcess = Runtime.getRuntime().exec("su");
             Log.i("WBR","su done");
             DataOutputStream input  = new DataOutputStream(suProcess.getOutputStream());
 
