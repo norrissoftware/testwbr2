@@ -147,7 +147,12 @@ public NetworkListFragment() {
 		Log.i("WBR"," MESSAGE :: "+message);
 
 	}
-	
+
+
+        public void viewNetwork2(final Network network) {
+               NetworkViewDialog.show(getActivity(),network,needRestore,this);
+        }
+
 	public void viewNetwork(final Network net) {
         android.util.Log.d("WBR","view net "+net.getAlias()+" / "+net.getSsid());
 
@@ -253,7 +258,7 @@ public NetworkListFragment() {
 
 
 
-    protected void unSelectRow(View view, int position) {
+    public void unSelectRow(View view, int position) {
         Resources res = getActivity().getResources();
         //android:id="@+id/selectionImage" view.findViewById(
         ImageView image = (ImageView)view.findViewById(R.id.selectionImage);

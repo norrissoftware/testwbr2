@@ -180,7 +180,7 @@ public class BackupedFragment extends NetworkListFragment implements ActionMode.
                 break;
             }
             case R.id.view_backup_network_action : {
-                viewNetwork(selectedNetwork);
+                viewNetwork2(selectedNetwork);
                 break;
             }
             case R.id.delete_backup_network_action : {

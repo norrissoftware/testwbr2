@@ -47,6 +47,8 @@ import com.beboo.wifibackupandrestore.backupmanagement.WIFIConfigurationManager;
 import android.widget.SimpleAdapter;
 
 
+
+
 public class ConfiguredFragment extends NetworkListFragment implements ActionMode.Callback {
 
 
@@ -152,7 +154,7 @@ public class ConfiguredFragment extends NetworkListFragment implements ActionMod
 */
 	
 	
-	private void backupNetwork(Network network, String alias) {
+	public void backupNetwork(Network network, String alias) {
 
 		Network backupedNetwork = network.clone();
 		backupedNetwork.setAlias(alias);
