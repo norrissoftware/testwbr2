@@ -46,7 +46,7 @@ public class NetworkViewDialog extends SimpleDialogFragment {
 
     @Override
     public BaseDialogFragment.Builder build(BaseDialogFragment.Builder builder) {
-        builder.setTitle("Jayne's hat");
+
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.viewdialogfragment, null);
         if (network.getAlias() != null) {
             TextView alias = (TextView)view.findViewById(R.id.view_alias);
