@@ -24,21 +24,25 @@ public class NetworkViewDialog extends SimpleDialogFragment {
     private Network network;
     private boolean isConfiguredTab;
     private NetworkListFragment fragment;
+    private int selectedPosition;
+    private View selectedView;
 
     public NetworkViewDialog() {
 
     }
 
-    public NetworkViewDialog initDialog(Network network,boolean isConfiguredTab, NetworkListFragment fragment) {
+    public NetworkViewDialog initDialog(Network network,boolean isConfiguredTab, NetworkListFragment fragment, int selectedPosition, View selectedView) {
         this.network = network;
         this.isConfiguredTab = isConfiguredTab;
         this.fragment = fragment;
+        this.selectedPosition = selectedPosition;
+        this.selectedView = selectedView;
         return this;
     }
 
-    public static void show(FragmentActivity activity, Network network,boolean isConfiguredTab, NetworkListFragment fragment) {
+    public static void show(FragmentActivity activity, Network network,boolean isConfiguredTab, NetworkListFragment fragment, int selectedPosition, View selectedView) {
 
-        new NetworkViewDialog().initDialog(network, isConfiguredTab, fragment).show(activity.getSupportFragmentManager(), "VIEW_NETWORK");
+        new NetworkViewDialog().initDialog(network, isConfiguredTab, fragment,selectedPosition,selectedView).show(activity.getSupportFragmentManager(), "VIEW_NETWORK");
     }
 
 
@@ -72,6 +76,8 @@ public class NetworkViewDialog extends SimpleDialogFragment {
         builder.setPositiveButton(getString(R.string.ok), new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                fragment.unSelectRow(selectedView,selectedPosition);
                 ISimpleDialogListener listener = getDialogListener();
                 if (listener != null) {
                     listener.onPositiveButtonClicked(0);
@@ -89,6 +95,7 @@ public class NetworkViewDialog extends SimpleDialogFragment {
                     Resources res = getActivity().getResources();
                     String msg = res.getString(R.string.view_restoring);
                     Toast.makeText(getActivity(), msg, Toast.LENGTH_LONG).show();
+                    fragment.unSelectRow(selectedView,selectedPosition);
                     dismiss();
 
                     ISimpleDialogListener listener = getDialogListener();
@@ -103,11 +110,13 @@ public class NetworkViewDialog extends SimpleDialogFragment {
             builder.setNegativeButton(getString(R.string.restore), new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    android.util.Log.i("WBR","leaving network view dialog on negative button");
+                    fragment.unSelectRow(selectedView,selectedPosition);
                     ISimpleDialogListener listener = getDialogListener();
                     if (listener != null) {
                         listener.onPositiveButtonClicked(0);
                     }
+
                     dismiss();
                 }
             });

@@ -100,7 +100,9 @@ public class BackupedFragment extends NetworkListFragment implements ActionMode.
                     catch(Exception e) {
                         e.printStackTrace();
                     }
+
                 }
+                BackupedFragment.this.unSelectRow(BackupedFragment.this.selectedView,BackupedFragment.this.selectedPosition);
             }
         };
 

@@ -150,7 +150,7 @@ public NetworkListFragment() {
 
 
         public void viewNetwork2(final Network network) {
-               NetworkViewDialog.show(getActivity(),network,needRestore,this);
+               NetworkViewDialog.show(getActivity(),network,needRestore,this,selectedPosition,selectedView);
         }
 
 	public void viewNetwork(final Network net) {
@@ -239,9 +239,9 @@ public NetworkListFragment() {
 
     protected ActionMode actionMode;
 
-    protected Network selectedNetwork;
+        public Network selectedNetwork;
 
-    protected View selectedView;
+        public View selectedView;
 
     protected int selectedPosition = -1;
 
@@ -259,6 +259,8 @@ public NetworkListFragment() {
 
 
     public void unSelectRow(View view, int position) {
+
+        android.util.Log.i("WBR",this.getClass().getName()+"unselect row "+position);
         Resources res = getActivity().getResources();
         //android:id="@+id/selectionImage" view.findViewById(
         ImageView image = (ImageView)view.findViewById(R.id.selectionImage);

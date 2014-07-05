@@ -53,7 +53,7 @@ public class ConfiguredFragment extends NetworkListFragment implements ActionMod
 
 
 
-	private SimpleAdapter contentAdapter;
+	private SimpleAdapter contentAdapter = null;
 	
 	public ConfiguredFragment() {
 		Log.d("WBR","################ new ConfiguredFragment");
@@ -194,8 +194,11 @@ public class ConfiguredFragment extends NetworkListFragment implements ActionMod
 
 	public void onNetworkDataChanged() {
 
-		Log.d("WBR","ConfiguredActivity : configured networks updated");		
-		contentAdapter = initList(confManager.getConfiguredNetworks());
+		Log.d("WBR","ConfiguredActivity : configured networks updated");
+        java.util.List<Network> networks = confManager.getConfiguredNetworks();
+
+            contentAdapter = initList(networks);
+
 		//initList(confManager.getConfiguredNetworks());
 	}
 
